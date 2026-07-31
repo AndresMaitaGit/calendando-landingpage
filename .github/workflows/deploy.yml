@@ -1,0 +1,36 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: 22
+          script: |
+            set -e
+            cd /home/apps/calendandoLanding
+            git fetch --all
+            git reset --hard origin/main
+
+            docker stop calendando-landing || true
+            docker rm calendando-landing || true
+            docker rmi calendando-landing:latest || true
+
+            docker build -t calendando-landing:latest .
+            docker run -d \
+              --name calendando-landing \
+              --restart unless-stopped \
+              -p 3005:3005 \
+              calendando-landing:latest
+
+            docker image prune -f
