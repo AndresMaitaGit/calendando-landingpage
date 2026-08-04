@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F8F7F2;font-family:"Manrope",ui-sans-serif,system-ui,sans-serif;color:#17190F;-webkit-font-smoothing:antialiased}
+a{color:#1E4A2F;text-decoration:none}
+a:hover{color:#2F7048}
+*{box-sizing:border-box}
+::selection{background:#CFE3D2}
+img,svg{max-width:100%}
+@media (max-width:1240px){
+[data-hero-stats]{top:auto !important;bottom:0 !important}
+}
+@media (max-width:1160px){
+#top{min-height:auto !important;padding-bottom:24px}
+[data-hero-visual]{height:min(625px,54vw) !important}
+[data-hero-phone]{width:236px !important;height:462px !important;left:47% !important}
+[data-hero-stats]{padding:14px 4px !important;height:auto !important}
+[data-hero-stats] div[style*="font-size:30px"]{font-size:24px !important}
+}
+@media (max-width:1080px){
+#top{min-height:auto !important;display:block !important}
+[data-hero-grid]{grid-template-columns:1fr !important;height:auto !important;overflow:visible !important;gap:28px !important;padding:0 clamp(20px,4vw,40px) 24px !important}
+[data-hero-grid]>div:first-child{height:auto !important;width:100% !important;padding-top:24px !important;padding-left:0 !important;display:flex !important;flex-direction:column;align-items:flex-start}
+[data-hero-phone]{position:static !important;left:auto !important;right:auto !important;top:auto !important;margin:0 auto 4px !important;order:-1}
+[data-hero-visual]{height:auto !important;margin-left:0 !important;display:flex !important;flex-direction:column;gap:20px;align-items:center}
+[data-hero-card]{position:static !important;inset:auto !important;width:100% !important;max-width:660px;min-height:430px}
+[data-hero-card]>div:last-child{width:auto !important;height:auto !important}
+[data-hero-stats]{position:static !important;inset:auto !important;width:100% !important;max-width:660px;height:auto !important;flex-wrap:wrap;row-gap:16px;justify-content:center !important;padding:20px 4px !important}
+}
+@media (max-width:900px){
+[data-cards-3]{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+}
+@media (max-width:820px){
+[data-nav]{display:none !important}
+[data-mobile-menu-btn]{display:flex !important}
+[data-header-cta]{display:none !important}
+}
+@media (max-width:760px){
+[data-how-grid]{grid-template-columns:1fr !important;gap:32px !important}
+}
+@media (max-width:620px){
+[data-hero-stats]>div{border-right:0 !important;padding:0 16px !important}
+[data-hero-card]>div:first-child{display:none !important}
+[data-hero-card]{grid-template-columns:1fr !important}
+}
+@media (max-width:600px){
+[data-cards-3]{grid-template-columns:1fr !important}
+[data-pricing-grid]{grid-template-columns:1fr !important}
+}
+}
+@keyframes om-chat-0{0%,3%{opacity:0;transform:translateY(6px) scale(.96)}9%,94%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-4px)}}
+@keyframes om-chat-1{0%,12%{opacity:0;transform:translateY(8px) scale(.95)}20%,94%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-4px)}}
+@keyframes om-chat-2{0%,44%{opacity:0;transform:translateY(8px) scale(.95)}52%,94%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-4px)}}
+@keyframes om-rise{from{transform:translate3d(0,22px,0)}to{transform:none}}
+@keyframes om-book{from{transform:scale(.9) translate3d(0,8px,0)}to{transform:none}}
+@keyframes om-float{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-9px,0)}}
+@keyframes om-pulse{0%{box-shadow:0 0 0 0 rgba(58,125,83,.5)}70%{box-shadow:0 0 0 9px rgba(58,125,83,0)}100%{box-shadow:0 0 0 0 rgba(58,125,83,0)}}
+@keyframes om-marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@keyframes om-typing{0%,20%{opacity:0}26%,40%{opacity:1}46%,100%{opacity:0}}
+@keyframes om-dot{0%,60%,100%{opacity:.28;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+</style>
+</helmet>
+<div ref="{{ rootRef }}" style="min-height:100vh;background:#F8F7F2;overflow-x:hidden">
+
+<header style="position: sticky; top: 0; z-index: 50; background: rgba(248,247,242,.88); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(23,25,15,.07)">
+<div style="max-width:1240px;margin:0 auto;padding:12px clamp(16px,3vw,40px);min-height:76px;display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+<a href="#top" style="display:flex;align-items:center;gap:10px;flex:none">
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect x="1.4" y="1.4" width="25.2" height="25.2" rx="7" stroke="#1E4A2F" stroke-width="2.2"></rect><path d="M8 14.6 L12.2 18.6 L20.2 9.6" stroke="#1E4A2F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:20px;letter-spacing:-.03em;color:#17190F">Calendando</span>
+</a>
+<nav data-nav="" style="display:flex;gap:clamp(18px,2.4vw,34px);margin:0 auto;font-size:14.5px;font-weight:500;color:#4A4D3E">
+<a href="#funciones" data-en="Features" style="color:#4A4D3E" style-hover="color:#17190F">Funciones</a>
+<a href="#para-quien" data-en="Who it's for" style="color:#4A4D3E" style-hover="color:#17190F">Para quién</a>
+<a href="#precios" data-en="Pricing" style="color:#4A4D3E" style-hover="color:#17190F">Precios</a>
+<a href="#recursos" data-en="Resources" style="color:#4A4D3E" style-hover="color:#17190F">Recursos</a>
+<a href="#contacto" data-en="Contact" style="color:#4A4D3E" style-hover="color:#17190F">Contacto</a>
+</nav>
+<div style="display:flex;align-items:center;gap:14px;flex:none">
+<div style="position:relative">
+<button onClick="{{ toggleLangMenu }}" style="display:flex;align-items:center;gap:7px;padding:7px 11px;background:#fff;border:1px solid rgba(23,25,15,.1);border-radius:9px;font-family:'Manrope',sans-serif;font-size:13px;font-weight:600;color:#3A3D30;cursor:pointer" style-hover="border-color:rgba(23,25,15,.22)">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.6 2.5 2.6 15.5 0 18M12 3c-2.6 2.5-2.6 15.5 0 18"></path></svg>
+<span>{{ langLabel }}</span>
+<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#8A8D7C" stroke-width="3"><path d="M5 8l7 8 7-8"></path></svg>
+</button>
+<div style="position:absolute;top:44px;right:0;display:{{ langMenuDisplay }};flex-direction:column;min-width:130px;background:#fff;border:1px solid rgba(23,25,15,.1);border-radius:11px;box-shadow:0 12px 30px rgba(23,25,15,.12);padding:6px;gap:2px">
+<button onClick="{{ pickEs }}" style="text-align:left;padding:8px 10px;border:0;border-radius:7px;background:transparent;font-family:'Manrope',sans-serif;font-size:13.5px;font-weight:600;color:#17190F;cursor:pointer" style-hover="background:#EDF2EA">Español</button>
+<button onClick="{{ pickEn }}" style="text-align:left;padding:8px 10px;border:0;border-radius:7px;background:transparent;font-family:'Manrope',sans-serif;font-size:13.5px;font-weight:600;color:#17190F;cursor:pointer" style-hover="background:#EDF2EA">English</button>
+</div>
+</div>
+<a href="https://app.calendando.com/" data-header-cta="" data-en="Free 14-day trial" style="padding:11px 18px;background:#1E4A2F;color:#fff;border-radius:10px;font-size:13.5px;font-weight:700;letter-spacing:-.01em;white-space:nowrap" style-hover="background:#17381F;color:#fff">Prueba gratis 14 días</a>
+<button data-mobile-menu-btn onClick="{{ toggleMobileMenu }}" style="display:none;align-items:center;justify-content:center;width:40px;height:40px;background:#fff;border:1px solid rgba(23,25,15,.1);border-radius:10px;cursor:pointer;flex:none" style-hover="border-color:rgba(23,25,15,.22)">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#17190F" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+</button>
+</div>
+</div>
+<div data-mobile-menu style="display:{{ mobileMenuDisplay }};flex-direction:column;padding:6px clamp(16px,3vw,40px) 18px;border-bottom:1px solid rgba(23,25,15,.07);background:rgba(248,247,242,.98);backdrop-filter:blur(14px)">
+<a href="#funciones" onClick="{{ closeMobileMenu }}" data-en="Features" style="display:block;padding:14px 0;font-size:15px;font-weight:600;color:#4A4D3E;border-bottom:1px solid rgba(23,25,15,.05)">Funciones</a>
+<a href="#para-quien" onClick="{{ closeMobileMenu }}" data-en="Who it's for" style="display:block;padding:14px 0;font-size:15px;font-weight:600;color:#4A4D3E;border-bottom:1px solid rgba(23,25,15,.05)">Para quién</a>
+<a href="#precios" onClick="{{ closeMobileMenu }}" data-en="Pricing" style="display:block;padding:14px 0;font-size:15px;font-weight:600;color:#4A4D3E;border-bottom:1px solid rgba(23,25,15,.05)">Precios</a>
+<a href="#recursos" onClick="{{ closeMobileMenu }}" data-en="Resources" style="display:block;padding:14px 0;font-size:15px;font-weight:600;color:#4A4D3E;border-bottom:1px solid rgba(23,25,15,.05)">Recursos</a>
+<a href="#contacto" onClick="{{ closeMobileMenu }}" data-en="Contact" style="display:block;padding:14px 0;font-size:15px;font-weight:600;color:#4A4D3E">Contacto</a>
+<a href="https://app.calendando.com/" onClick="{{ closeMobileMenu }}" data-en="Free 14-day trial" style="display:block;margin-top:14px;padding:13px;text-align:center;background:#1E4A2F;color:#fff;border-radius:10px;font-size:14px;font-weight:700">Prueba gratis 14 días</a>
+</div>
+</header>
+
+<section id="top" style="position: static; border-bottom: 1px solid rgba(23,25,15,.07); overflow: visible; display: flex; justify-content: space-around; width: 100%; flex-direction: row; min-height: 653px; padding-top: 0px; padding-bottom: 0px">
+
+<div data-hero-grid="" style="margin: 20px 0; padding: 0px 0px 0px; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.42fr); gap: clamp(16px,2.6vw,44px); align-items: stretch; justify-content: space-between; position: relative; width: 100%; height: 100%; overflow: hidden">
+
+
+<div style="position: static; display: block; z-index: auto; padding-top: clamp(40px, 8vw, 100px); padding-left: clamp(0px, 4vw, 50px)">
+<div style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:#E7EDE2;border:1px solid rgba(30,74,47,.14);border-radius:999px;margin-bottom:26px;max-width:100%;height:auto;line-height:1.25">
+<span style="width:6px;height:6px;border-radius:999px;background:#3A7D53;flex:none"></span>
+<span data-en="Book more. Manage less." style="font-size:12.5px;font-weight:600;color:#2C4A34;letter-spacing:-.01em">Agenda más. Administra menos.</span>
+</div>
+<h1 style="margin:0 0 24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(34px,5.2vw,62px);line-height:1.04;letter-spacing:-.045em;font-weight:800;color:#17190F;text-wrap:balance">
+<span data-en="Your calendar, on autopilot.">Tu agenda, en piloto automático.</span>
+
+</h1>
+<p data-en="Calendando is the all-in-one appointment scheduling platform for service businesses, independent professionals and clinics. Eliminate double-bookings, no-shows and hours of admin work by automating bookings, reminders and confirmations right inside WhatsApp." style="margin: 0 0 34px; max-width: 480px; font-size: clamp(14px,2vw,16px); line-height: 1.62; color: #5A5D4D; margin-bottom: 5px">Calendando es la plataforma todo-en-uno de programación de citas para negocios de servicios, profesionales independientes y clínicas. Elimina dobles reservas, ausencias y horas de trabajo administrativo automatizando, recordatorios y confirmaciones directamente por WhatsApp.</p>
+<div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 30px">
+
+
+<a href="#precios" style="display: flex; align-items: center; gap: 10px; padding: 15px 24px; background: #1E4A2F; color: #fff; border-radius: 12px; font-size: 15px; font-weight: 700; letter-spacing: -.01em; box-shadow: 0 6px 18px rgba(30,74,47,.22); padding-top: 15px; padding-bottom: 15px" style-hover="background:#17381F;color:#fff">
+<span data-en="Free 14-day trial">Prueba gratis 14 días</span>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+</a></div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; align-items: stretch">
+<div style="display:flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="2.2"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.8 2.8L16 9.5"></path></svg><span data-en="No credit card" style="font-size:13px;font-weight:500;color:#5A5D4D">Sin tarjeta de crédito</span></div>
+<div style="display:flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="2.2"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.8 2.8L16 9.5"></path></svg><span data-en="Set up in minutes" style="font-size:13px;font-weight:500;color:#5A5D4D">Configuración en minutos</span></div>
+<div style="display:flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="2.2"><circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.8 2.8L16 9.5"></path></svg><span data-en="Cancel anytime" style="font-size:13px;font-weight:500;color:#5A5D4D">Cancela cuando quieras</span></div>
+</div>
+</div><div data-hero-visual="" style="position: relative; min-height: 625px; width: 100%; align-self: flex-end; display: block; padding-top: 20px; margin-top: 20px; margin-left: clamp(0px,15vw,191px); z-index: 2">
+<div data-hero-phone="" style="z-index: 10; position: absolute; left: -21%; top: 16px; width: 264px; height: 516px; background: #17190F; border-radius: 40px; padding: 9px; box-shadow: 0 30px 70px rgba(23,25,15,.28); padding-top: 9px; padding-right: 9px; padding-bottom: 9px; padding-left: 9px">
+<div style="width:100%;height:100%;background:#EDE6DE;border-radius:32px;overflow:hidden;display:flex;flex-direction:column;position:relative">
+<div style="display:flex;justify-content:space-between;padding:11px 20px 4px;font-size:10.5px;font-weight:700;color:#17190F"><span>9:41</span><span style="display:flex;gap:4px;align-items:center"><svg width="14" height="9" viewBox="0 0 14 9" fill="#17190F"><rect x="0" y="6" width="2.4" height="3" rx=".6"></rect><rect x="3.6" y="4" width="2.4" height="5" rx=".6"></rect><rect x="7.2" y="2" width="2.4" height="7" rx=".6"></rect><rect x="10.8" y="0" width="2.4" height="9" rx=".6"></rect></svg><svg width="18" height="9" viewBox="0 0 18 9" fill="none"><rect x=".5" y=".5" width="14" height="8" rx="2" stroke="#17190F"></rect><rect x="2" y="2" width="10" height="5" rx="1" fill="#17190F"></rect><path d="M16 3v3" stroke="#17190F" stroke-width="1.6"></path></svg></span></div>
+<div style="display:flex;align-items:center;gap:9px;padding:8px 14px 10px;background:#F2EDE7;border-bottom:1px solid rgba(23,25,15,.07)">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="2.6"><path d="M15 5l-7 7 7 7"></path></svg>
+<div style="width:30px;height:30px;border-radius:999px;background:#E4EFE3;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 28 28" fill="none"><rect x="1.4" y="1.4" width="25.2" height="25.2" rx="7" stroke="#1E4A2F" stroke-width="2.6"></rect><path d="M8 14.6 L12.2 18.6 L20.2 9.6" stroke="#1E4A2F" stroke-width="3" stroke-linecap="round"></path></svg></div>
+<div style="flex:1;min-width:0">
+<div style="display:flex;align-items:center;gap:5px"><span style="font-size:13px;font-weight:700;letter-spacing:-.02em">Calendando</span><svg width="11" height="11" viewBox="0 0 24 24" fill="#3A7D53"><path d="M12 2l2.2 1.6 2.7-.3 1 2.5 2.3 1.4-.6 2.6.9 2.5-2 1.8-.6 2.6-2.7.3L12 22l-2.2-1.5-2.7-.3-.6-2.6-2-1.8.9-2.5-.6-2.6L7 8.8l1-2.5 2.7.3z"></path><path d="M8.6 12.4l2.4 2.4 4.4-5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"></path></svg></div>
+<div data-en="online" style="font-size:10px;color:#7A7D6C">en línea</div>
+</div>
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7A7D6C" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.8 2z"></path></svg>
+<svg width="15" height="15" viewBox="0 0 24 24" fill="#7A7D6C"><circle cx="12" cy="5" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="12" cy="19" r="1.8"></circle></svg>
+</div>
+<div style="flex:1;padding:12px 12px 8px;display:flex;flex-direction:column;gap:8px;overflow:hidden">
+<div data-en="Today" style="align-self:center;padding:3px 10px;background:rgba(23,25,15,.06);border-radius:6px;font-size:9.5px;font-weight:600;color:#6A6D5C;animation:om-chat-0 11s ease-in-out infinite">Hoy</div>
+
+<div style="align-self:flex-start;display:flex;align-items:center;gap:4px;padding:9px 12px;background:#fff;border-radius:12px 12px 12px 3px;box-shadow:0 1px 2px rgba(23,25,15,.1);animation:om-typing 11s ease-in-out infinite;margin-bottom:-4px">
+<span style="width:5px;height:5px;border-radius:999px;background:#8A8D7C;animation:om-dot 1.1s ease-in-out infinite"></span>
+<span style="width:5px;height:5px;border-radius:999px;background:#8A8D7C;animation:om-dot 1.1s ease-in-out .18s infinite"></span>
+<span style="width:5px;height:5px;border-radius:999px;background:#8A8D7C;animation:om-dot 1.1s ease-in-out .36s infinite"></span>
+</div>
+
+<div style="animation:om-chat-1 11s ease-in-out infinite; align-self: flex-start; max-width: 78%; background: #fff; border-radius: 12px 12px 12px 3px; padding: 8px 11px; box-shadow: 0 1px 2px rgba(23,25,15,.1); width: 170px; height: 116px">
+<div data-en="Hi! 👋 Book your appointment in just a few steps." style="font-size: 11.5px; line-height: 1.42; color: #17190F; width: 156px; height: 87px">¡Hola María López! 👋<br><br>Recuerda que hoy a las <b>9:00pm</b> tienes tu Corte de cabello en <b>Realza Studio</b>💫.</div><div style="text-align: right; font-size: 8.5px; color: #9A9D8C; margin-top: 0px">7:00</div>
+
+</div>
+<div style="align-self:flex-end;max-width:80%;background:#DCF3D6;border-radius:12px 12px 3px 12px;padding:8px 11px;box-shadow:0 1px 2px rgba(23,25,15,.1);animation:om-chat-2 11s ease-in-out infinite">
+<div data-en="Great — what day and time works best?" style="font-size:11.5px;line-height:1.42;color:#17190F">Perfecto, Muchas Gracias👍</div>
+<div style="display:flex;justify-content:flex-end;align-items:center;gap:3px;font-size:8.5px;color:#7A9A7C;margin-top:3px"><span>11:31</span><svg width="12" height="8" viewBox="0 0 18 12" fill="none" stroke="#4A9464" stroke-width="2"><path d="M1 6.5l3.6 3.6L11 3"></path><path d="M7 6.5l3.6 3.6L17 3"></path></svg></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:8px;padding:9px 12px 16px;background:#F2EDE7;border-top:1px solid rgba(23,25,15,.07)">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7A7D6C" stroke-width="2"><path d="M12 5v14M5 12h14"></path></svg>
+<div style="flex:1;height:26px;background:#fff;border-radius:999px"></div>
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7A7D6C" stroke-width="2"><rect x="3" y="6" width="14" height="12" rx="3"></rect><path d="M17 11l4-3v8l-4-3"></path></svg>
+<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7A7D6C" stroke-width="2"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M6 12a6 6 0 0012 0M12 18v3"></path></svg>
+</div>
+</div>
+</div>
+
+<div data-hero-card="" style="position: absolute; left: 14%; top: 0px; right: 0; bottom: 104px; border: 1px solid rgba(23,25,15,.08); border-radius: 20px; box-shadow: 0 24px 60px rgba(23,25,15,.1); overflow: hidden; display: grid; width: 100%; height: 496px; z-index: 4; border-style: solid; grid-template-columns: 64px minmax(0,1fr); background-color: #FBF7F7">
+
+<div style="background:#17301F;padding:20px 0;display:flex;flex-direction:column;align-items:center;gap:20px">
+<svg width="22" height="22" viewBox="0 0 28 28" fill="none"><rect x="1.4" y="1.4" width="25.2" height="25.2" rx="7" stroke="#8FBF9F" stroke-width="2.2"></rect><path d="M8 14.6 L12.2 18.6 L20.2 9.6" stroke="#8FBF9F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<div style="display:flex;flex-direction:column;gap:14px;margin-top:8px">
+<div style="width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#DCEBE0" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"></rect><path d="M3 10h18"></path></svg></div>
+<div style="width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(220,235,224,.45)" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"></path></svg></div>
+<div style="width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(220,235,224,.45)" stroke-width="2"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 20c1.2-3.6 4-5 7-5s5.8 1.4 7 5"></path></svg></div>
+<div style="width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(220,235,224,.45)" stroke-width="2"><path d="M5 19V11M11 19V5M17 19v-6"></path></svg></div>
+<div style="width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(220,235,224,.45)" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v3M12 18v3M3 12h3M18 12h3"></path></svg></div>
+</div>
+</div><div style="padding: 22px 24px">
+<div data-en="Calendar" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:19px;font-weight:700;letter-spacing:-.03em;margin-bottom:16px">Calendario</div>
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:18px">
+<span data-en="Today" style="padding:6px 13px;border:1px solid rgba(23,25,15,.13);border-radius:8px;font-size:12.5px;font-weight:600">Hoy</span>
+<span style="width:30px;height:30px;border:1px solid rgba(23,25,15,.13);border-radius:8px;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5A5D4D" stroke-width="2.6"><path d="M15 5l-7 7 7 7"></path></svg></span>
+<span style="width:30px;height:30px;border:1px solid rgba(23,25,15,.13);border-radius:8px;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5A5D4D" stroke-width="2.6"><path d="M9 5l7 7-7 7"></path></svg></span>
+<span data-en="May 2026" style="margin-left:8px;font-size:15px;font-weight:600;letter-spacing:-.02em">Mayo 2026</span>
+</div>
+<div style="display:grid;grid-template-columns:56px repeat(4,minmax(0,1fr));gap:0;border-top:1px solid rgba(23,25,15,.07)">
+<div></div>
+<div style="padding:12px 4px;text-align:center"><div data-en="MON" style="font-size:9.5px;font-weight:700;letter-spacing:.1em;color:#9A9D8C">LUN</div><div style="font-size:19px;font-weight:600;letter-spacing:-.03em;margin-top:4px">20</div></div>
+<div style="padding:12px 4px;text-align:center"><div data-en="TUE" style="font-size:9.5px;font-weight:700;letter-spacing:.1em;color:#9A9D8C">MAR</div><div style="font-size:19px;font-weight:600;letter-spacing:-.03em;margin-top:4px">21</div></div>
+<div style="padding:12px 4px;text-align:center"><div data-en="WED" style="font-size:9.5px;font-weight:700;letter-spacing:.1em;color:#3A7D53">MIÉ</div><div style="margin:4px auto 0;width:30px;height:30px;border-radius:999px;background:#17301F;color:#fff;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center">22</div></div>
+<div style="padding:12px 4px;text-align:center"><div data-en="THU" style="font-size:9.5px;font-weight:700;letter-spacing:.1em;color:#9A9D8C">JUE</div><div style="font-size:19px;font-weight:600;letter-spacing:-.03em;margin-top:4px">23</div></div>
+</div>
+<div style="display:grid;grid-template-columns:56px repeat(4,minmax(0,1fr));grid-auto-rows:52px">
+<div style="border-top:1px solid rgba(23,25,15,.06);font-size:11px;color:#9A9D8C;padding-top:4px">9:00</div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06);padding:3px"><div style="background:#E4EFE3;border-left:3px solid #4A9464;border-radius:6px;padding:6px 8px"><div style="font-size:11px;font-weight:700;color:#1E4A2F">María López</div><div data-en="Haircut" style="font-size:10px;color:#4A7057">Corte de cabello</div></div></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+
+<div style="border-top:1px solid rgba(23,25,15,.06);font-size:11px;color:#9A9D8C;padding-top:4px">10:00</div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06);padding:3px"><div style="background:#F7EEDC;border-left:3px solid #D6A83C;border-radius:6px;padding:6px 8px"><div style="font-size:11px;font-weight:700;color:#7A5A17">Ana Torres</div><div data-en="Coloring" style="font-size:10px;color:#8A6A2A">Coloración</div></div></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+
+<div style="border-top:1px solid rgba(23,25,15,.06);font-size:11px;color:#9A9D8C;padding-top:4px">11:00</div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06);padding:3px"><div style="background:#E4E9F7;border-left:3px solid #6C82C4;border-radius:6px;padding:6px 8px"><div style="font-size:11px;font-weight:700;color:#3A4A7A">Pedro Ramírez</div><div data-en="Treatment" style="font-size:10px;color:#5A6A9A">Tratamiento</div></div></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+
+<div style="border-top:1px solid rgba(23,25,15,.06);font-size:11px;color:#9A9D8C;padding-top:4px">12:00</div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06);padding:3px"><div style="background:#F2E6F5;border-left:3px solid #A97BB8;border-radius:6px;padding:6px 8px"><div style="font-size:11px;font-weight:700;color:#6A3A7A">Laura Gómez</div><div data-en="Haircut" style="font-size:10px;color:#8A5A9A">Corte de cabello</div></div></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+
+<div style="border-top:1px solid rgba(23,25,15,.06);font-size:11px;color:#9A9D8C;padding-top:4px">13:00</div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06);padding:3px"><div style="background:#E4EFE3;border-left:3px solid #4A9464;border-radius:6px;padding:6px 8px"><div style="font-size:11px;font-weight:700;color:#1E4A2F">Carlos Ruiz</div><div data-en="Beard trim" style="font-size:10px;color:#4A7057">Barba</div></div></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+<div style="border-top:1px solid rgba(23,25,15,.06);border-left:1px solid rgba(23,25,15,.06)"></div>
+</div>
+</div>
+</div>
+
+
+
+
+<div data-hero-stats="" style="position: absolute; display: flex; gap: 0; background: #fff; border: 1px solid rgba(23,25,15,.08); border-radius: 16px; box-shadow: 0 18px 44px rgba(23,25,15,.13); padding: 18px 4px; z-index: 12; left: 10%; justify-content: space-between; top: 432px; width: min(498px,72%); height: 127px">
+<div style="padding:0 24px;border-right:1px solid rgba(23,25,15,.08)"><div data-en="Confirmed bookings" style="font-size:11.5px;font-weight:600;color:#8A8D7C;margin-bottom:6px">Citas confirmadas</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:30px;font-weight:800;letter-spacing:-.04em">128</div><div data-en="+32% vs last month" style="font-size:10.5px;font-weight:600;color:#3A7D53;margin-top:4px">+32% vs. mes anterior</div></div>
+<div style="padding:0 24px;border-right:1px solid rgba(23,25,15,.08)"><div data-en="No-shows" style="font-size:11.5px;font-weight:600;color:#8A8D7C;margin-bottom:6px">Ausencias</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:30px;font-weight:800;letter-spacing:-.04em">2%</div><div data-en="-68% vs last month" style="font-size:10.5px;font-weight:600;color:#3A7D53;margin-top:4px">-68% vs. mes anterior</div></div>
+<div style="padding:0 24px"><div data-en="Hours saved" style="font-size:11.5px;font-weight:600;color:#8A8D7C;margin-bottom:6px">Horas ahorradas</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:30px;font-weight:800;letter-spacing:-.04em">18h</div><div data-en="+40% vs last month" style="font-size:10.5px;font-weight:600;color:#3A7D53;margin-top:4px">+40% vs. mes anterior</div></div>
+</div></div>
+</div></section>
+
+<section style="background: #F2F1EA; border-bottom: 1px solid rgba(23,25,15,.07); width: 100%">
+<div style="max-width: 1140px; margin: 0 auto; padding: clamp(32px,4vw,44px) clamp(20px,4vw,40px) clamp(36px,4.5vw,52px); position: relative">
+<p data-en="More than 1,000 businesses already trust Calendando" style="margin:0 0 30px;text-align:center;font-size:13.5px;font-weight:600;color:#7A7D6C;letter-spacing:-.01em">Puedes utilizarlo para diferentes tipos de negocio</p>
+<div style="position:relative;overflow:hidden;mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%)">
+<div style="display:flex;width:max-content;animation:om-marquee 42s linear infinite">
+<div style="display:flex;align-items:center;gap:14px;padding-right:14px;flex:none">
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v8M8 12h8"></path></svg><span data-en="Clinics" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Clínicas</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M6 4l6 8 6-8M8 20a4 4 0 100-8 4 4 0 000 8zM16 20a4 4 0 100-8 4 4 0 000 8z"></path></svg><span data-en="Beauty salons" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Salones de belleza</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 21c-3-2-6-5-6-10a4 4 0 016-3 4 4 0 016 3c0 5-3 8-6 10z"></path></svg><span data-en="Dental practices" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Consultorios dentales</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 3c2.5 3 4 5.5 4 8a4 4 0 11-8 0c0-2.5 1.5-5 4-8z"></path><path d="M6 20h12"></path></svg><span data-en="Wellness centers" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Centros de bienestar</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M4 9v6M20 9v6M7 7v10M17 7v10M7 12h10"></path></svg><span data-en="Gyms &amp; studios" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Gimnasios y estudios</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="8.4" cy="9" r="1.9"></circle><circle cx="15.6" cy="9" r="1.9"></circle><circle cx="5.6" cy="14" r="1.7"></circle><circle cx="18.4" cy="14" r="1.7"></circle><path d="M12 20.5c-2.6 0-4.6-1.7-4.6-3.8 0-2 2-3.4 4.6-3.4s4.6 1.4 4.6 3.4c0 2.1-2 3.8-4.6 3.8z"></path></svg><span data-en="Veterinary clinics" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Veterinarias</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 4v16M6 20h12M4 9h8M20 9h-8M4 9l-1.6 4a3 3 0 005.2 0L6 9M20 9l1.6 4a3 3 0 01-5.2 0L18 9"></path></svg><span data-en="Law firms" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Despachos legales</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M4 6.5A18 18 0 0112 5a18 18 0 018 1.5V18A18 18 0 0012 16.5 18 18 0 014 18z"></path><path d="M12 5v11.5"></path></svg><span data-en="Tutors &amp; academies" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Tutores y academias</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M4 12h3l2-5 3 10 2.5-5H20"></path></svg><span data-en="Physiotherapy" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Fisioterapia</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 20c1.2-3.6 4-5 7-5s5.8 1.4 7 5"></path></svg><span data-en="Coaches &amp; consultants" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Coaches y consultores</span></div>
+</div>
+<div style="display:flex;align-items:center;gap:14px;padding-right:14px;flex:none">
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v8M8 12h8"></path></svg><span data-en="Clinics" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Clínicas</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M6 4l6 8 6-8M8 20a4 4 0 100-8 4 4 0 000 8zM16 20a4 4 0 100-8 4 4 0 000 8z"></path></svg><span data-en="Beauty salons" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Salones de belleza</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 21c-3-2-6-5-6-10a4 4 0 016-3 4 4 0 016 3c0 5-3 8-6 10z"></path></svg><span data-en="Dental practices" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Consultorios dentales</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 3c2.5 3 4 5.5 4 8a4 4 0 11-8 0c0-2.5 1.5-5 4-8z"></path><path d="M6 20h12"></path></svg><span data-en="Wellness centers" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Centros de bienestar</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M4 9v6M20 9v6M7 7v10M17 7v10M7 12h10"></path></svg><span data-en="Gyms &amp; studios" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Gimnasios y estudios</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="8.4" cy="9" r="1.9"></circle><circle cx="15.6" cy="9" r="1.9"></circle><circle cx="5.6" cy="14" r="1.7"></circle><circle cx="18.4" cy="14" r="1.7"></circle><path d="M12 20.5c-2.6 0-4.6-1.7-4.6-3.8 0-2 2-3.4 4.6-3.4s4.6 1.4 4.6 3.4c0 2.1-2 3.8-4.6 3.8z"></path></svg><span data-en="Veterinary clinics" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Veterinarias</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 4v16M6 20h12M4 9h8M20 9h-8M4 9l-1.6 4a3 3 0 005.2 0L6 9M20 9l1.6 4a3 3 0 01-5.2 0L18 9"></path></svg><span data-en="Law firms" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Despachos legales</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M4 6.5A18 18 0 0112 5a18 18 0 018 1.5V18A18 18 0 0012 16.5 18 18 0 014 18z"></path><path d="M12 5v11.5"></path></svg><span data-en="Tutors &amp; academies" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Tutores y academias</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M4 12h3l2-5 3 10 2.5-5H20"></path></svg><span data-en="Physiotherapy" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Fisioterapia</span></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none;padding:11px 20px;background:#FBFAF6;border:1px solid rgba(23,25,15,.08);border-radius:999px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 20c1.2-3.6 4-5 7-5s5.8 1.4 7 5"></path></svg><span data-en="Coaches &amp; consultants" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em;color:#4A4D3E;white-space:nowrap">Coaches y consultores</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="funciones" style="background:#F8F7F2">
+<div style="max-width:1240px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(20px,4vw,40px)">
+<div style="text-align: center; margin-bottom: 52px; position: relative">
+<span data-en="EVERYTHING YOU NEED" style="display:inline-block;padding:6px 14px;background:#E7EDE2;border:1px solid rgba(30,74,47,.14);border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.14em;color:#2C4A34">TODO LO QUE NECESITAS</span>
+<h2 data-en="One platform. Every tool." style="margin:20px 0 14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(28px,3.6vw,44px);line-height:1.08;letter-spacing:-.045em;font-weight:800;color:#17190F">Toda lo que Necesitas <br>En una Sola Plataforma.</h2>
+<p data-en="Calendando centralizes and automates your calendar so you can focus on what really matters: your clients." style="margin:0 auto;max-width:620px;font-size:15.5px;line-height:1.6;color:#5A5D4D">Calendando centraliza y automatiza tu agenda para que puedas enfocarte en lo que realmente importa: tus clientes.</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px" data-cards-3="">
+<div style="background:#fff;border:1px solid rgba(23,25,15,.08);border-radius:16px;padding:26px" style-hover="border-color:rgba(30,74,47,.3);transform:translateY(-3px)">
+<div style="width:46px;height:46px;border-radius:12px;background:#E7EDE2;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F6B44" stroke-width="1.9" stroke-linecap="round"><path d="M21 11.5a8.4 8.4 0 01-12.2 7.5L3 21l2-5.6A8.4 8.4 0 1121 11.5z"></path></svg></div>
+<h3 data-en="WhatsApp booking" style="margin:0 0 8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.025em">Recordatorios por WhatsApp</h3>
+<p data-en="Clients book in seconds without ever leaving WhatsApp — no apps, no forms, no calls." style="margin:0;font-size:13.5px;line-height:1.58;color:#6A6D5C">Tus clientes recibirán mensajes de recordatorios directo al WhatsApp. Sin apps, sin formularios, sin llamadas.</p>
+</div>
+<div style="background:#fff;border:1px solid rgba(23,25,15,.08);border-radius:16px;padding:26px" style-hover="border-color:rgba(30,74,47,.3);transform:translateY(-3px)">
+<div style="width:46px;height:46px;border-radius:12px;background:#E7EDE2;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F6B44" stroke-width="1.9" stroke-linecap="round"><path d="M18 8a6 6 0 10-12 0c0 6-2 7-2 7h16s-2-1-2-7"></path><path d="M10.5 20a2 2 0 003 0"></path></svg></div>
+<h3 data-en="Automatic reminders" style="margin:0 0 8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.025em">Reservaciones en Calendario</h3>
+<p data-en="Cut no-shows with smart, personalized reminders sent at exactly the right moment." style="margin:0;font-size:13.5px;line-height:1.58;color:#6A6D5C">Reduce el uso de calendarios manuales, Podrás ver a tiempo las reservas del día y posterios,</p>
+</div>
+<div style="background:#fff;border:1px solid rgba(23,25,15,.08);border-radius:16px;padding:26px" style-hover="border-color:rgba(30,74,47,.3);transform:translateY(-3px)">
+<div style="width:46px;height:46px;border-radius:12px;background:#E7EDE2;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F6B44" stroke-width="1.9" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"></rect><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"></path></svg></div>
+<h3 data-en="No more double-bookings" style="margin:0 0 8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.025em">Sin dobles reservas</h3>
+<p data-en="Your availability stays synced and up to date in real time, across every staff member." style="margin:0;font-size:13.5px;line-height:1.58;color:#6A6D5C">Tu disponibilidad siempre sincronizada y actualizada en tiempo real, para todo tu equipo.</p>
+</div>
+<div style="background:#fff;border:1px solid rgba(23,25,15,.08);border-radius:16px;padding:26px" style-hover="border-color:rgba(30,74,47,.3);transform:translateY(-3px)">
+<div style="width:46px;height:46px;border-radius:12px;background:#E7EDE2;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F6B44" stroke-width="1.9" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="3"></rect><path d="M2 10h20M6 15h4"></path></svg></div>
+<h3 data-en="Instant confirmations" style="margin:0 0 8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.025em">Confirmaciones instantáneas</h3>
+<p data-en="Automatic confirmations that build trust and make your business look professional." style="margin:0;font-size:13.5px;line-height:1.58;color:#6A6D5C">Confirmaciones automáticas que dan confianza y hacen ver tu negocio profesional.</p>
+</div>
+<div style="background:#fff;border:1px solid rgba(23,25,15,.08);border-radius:16px;padding:26px" style-hover="border-color:rgba(30,74,47,.3);transform:translateY(-3px)">
+<div style="width:46px;height:46px;border-radius:12px;background:#E7EDE2;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F6B44" stroke-width="1.9" stroke-linecap="round"><path d="M5 20V12M11 20V4M17 20v-6"></path></svg></div>
+<h3 data-en="Reports and insights" style="margin:0 0 8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.025em">Reportes y estadísticas</h3>
+<p data-en="Understand your business in depth and make better decisions with real data." style="margin:0;font-size:13.5px;line-height:1.58;color:#6A6D5C">Conoce tu negocio a fondo y toma mejores decisiones con datos reales.</p>
+</div>
+<div style="background:#fff;border:1px solid rgba(23,25,15,.08);border-radius:16px;padding:26px" style-hover="border-color:rgba(30,74,47,.3);transform:translateY(-3px)">
+<div style="width:46px;height:46px;border-radius:12px;background:#E7EDE2;display:flex;align-items:center;justify-content:center;margin-bottom:18px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F6B44" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"></circle><path d="M12 3v3.4M12 17.6V21M3 12h3.4M17.6 12H21M5.6 5.6l2.4 2.4M16 16l2.4 2.4M18.4 5.6L16 8M8 16l-2.4 2.4"></path></svg></div>
+<h3 data-en="Integrations" style="margin:0 0 8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.025em">Integración con Goolge Calender</h3>
+<p data-en="Connect the tools you already use and take your workflow to the next level." style="margin:0;font-size:13.5px;line-height:1.58;color:#6A6D5C">Conecta con tu calendario de Google Calender para mayor facilidad.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background:#17301F;color:#fff">
+<div style="max-width:1240px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(20px,4vw,40px)">
+<div data-how-grid="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:60px;align-items:start">
+<div>
+<span data-en="HOW IT WORKS" style="display:inline-block;padding:6px 14px;background:rgba(255,255,255,.1);border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.14em;color:#B8D6C0">CÓMO FUNCIONA</span>
+<h2 data-en="Live in one afternoon." style="margin:20px 0 16px;font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(27px,3.4vw,42px);line-height:1.08;letter-spacing:-.045em;font-weight:800;color:#fff">En marcha en una tarde.</h2>
+<p data-en="No IT team, no migrations, no training. Connect your number and Calendando starts answering." style="margin:0;font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.66)">Sin equipo técnico, sin migraciones, sin capacitaciones. Conecta tu número y Calendando empieza a responder.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:2px">
+<div style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:20px;padding:26px 0;border-top:1px solid rgba(255,255,255,.14)">
+<div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:34px;font-weight:800;letter-spacing:-.05em;color:#6FA981">01</div>
+<div><h3 data-en="Connect your WhatsApp" style="margin:0 0 7px;font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:700;letter-spacing:-.03em;color:#fff">Conecta tu WhatsApp</h3><p data-en="Link your business number in a couple of clicks. Keep the number your clients already know." style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,.6)">Vincula tu número de negocio en un par de clics. Conserva el número que tus clientes ya conocen.</p></div>
+</div>
+<div style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:20px;padding:26px 0;border-top:1px solid rgba(255,255,255,.14)">
+<div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:34px;font-weight:800;letter-spacing:-.05em;color:#6FA981">02</div>
+<div><h3 data-en="Set services and hours" style="margin:0 0 7px;font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:700;letter-spacing:-.03em;color:#fff">Define servicios y horarios</h3><p data-en="Duration, price, staff, buffers and rules per service. Calendando handles the rest." style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,.6)">Duración, precio, personal, tiempos de descanso y reglas por servicio. Calendando hace el resto.</p></div>
+</div>
+<div style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:20px;padding:26px 0;border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14)">
+<div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:34px;font-weight:800;letter-spacing:-.05em;color:#6FA981">03</div>
+<div><h3 data-en="Let it book for you" style="margin:0 0 7px;font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:700;letter-spacing:-.03em;color:#fff">Deja que agende por ti</h3><p data-en="Bookings, reminders, confirmations and reschedules run on their own, 24/7." style="margin:0;font-size:14px;line-height:1.6;color:rgba(255,255,255,.6)">Reservas, recordatorios, confirmaciones y reprogramaciones funcionan solas, 24/7.</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="para-quien" style="background:#F8F7F2">
+<div style="max-width:1240px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(20px,4vw,40px)">
+<div style="display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:40px;flex-wrap:wrap">
+<div>
+<span data-en="WHO IT'S FOR" style="display:inline-block;padding:6px 14px;background:#E7EDE2;border:1px solid rgba(30,74,47,.14);border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.14em;color:#2C4A34">PARA QUIÉN</span>
+<h2 data-en="Built for businesses that live by the calendar." style="margin:20px 0 0;max-width:620px;font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(27px,3.4vw,42px);line-height:1.08;letter-spacing:-.045em;font-weight:800">Hecho para negocios que viven de su agenda.</h2>
+</div>
+<a href="#contacto" data-en="Not sure if it fits you? Talk to us →" style="font-size:14px;font-weight:700;color:#2F6B44;white-space:nowrap">¿No sabes si aplica a ti? Habla con nosotros →</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px" data-cards-3="">
+<div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(23,25,15,.08);border-radius:14px;padding:20px 22px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6B44" stroke-width="1.8"><path d="M6 4l6 8 6-8M8 20a4 4 0 100-8 4 4 0 000 8zM16 20a4 4 0 100-8 4 4 0 000 8z"></path></svg><span data-en="Salons &amp; barbershops" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em">Salones y barberías</span></div>
+<div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(23,25,15,.08);border-radius:14px;padding:20px 22px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6B44" stroke-width="1.8"><path d="M12 21c-3-2-6-5-6-10a4 4 0 016-3 4 4 0 016 3c0 5-3 8-6 10z"></path></svg><span data-en="Dental clinics" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em">Clínicas dentales</span></div>
+<div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(23,25,15,.08);border-radius:14px;padding:20px 22px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6B44" stroke-width="1.8"><path d="M12 5v14M5 12h14"></path><circle cx="12" cy="12" r="9"></circle></svg><span data-en="Medical practices" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em">Consultorios médicos</span></div>
+<div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(23,25,15,.08);border-radius:14px;padding:20px 22px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6B44" stroke-width="1.8"><path d="M4 12h3l2-5 3 10 2.5-5H20"></path></svg><span data-en="Physio &amp; wellness" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em">Fisioterapia y bienestar</span></div>
+<div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(23,25,15,.08);border-radius:14px;padding:20px 22px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6B44" stroke-width="1.8"><path d="M12 3c2.5 3 4 5.5 4 8a4 4 0 11-8 0c0-2.5 1.5-5 4-8z"></path><path d="M6 20h12"></path></svg><span data-en="Spas &amp; aesthetics" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em">Spas y estética</span></div>
+<div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid rgba(23,25,15,.08);border-radius:14px;padding:20px 22px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F6B44" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 20c1.2-3.6 4-5 7-5s5.8 1.4 7 5"></path></svg><span data-en="Independent professionals" style="font-size:14.5px;font-weight:600;letter-spacing:-.015em">Profesionales independientes</span></div>
+</div>
+</div>
+</section>
+
+<section id="precios" style="background:#F2F1EA;border-top:1px solid rgba(23,25,15,.07);border-bottom:1px solid rgba(23,25,15,.07)">
+<div style="max-width:1240px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(20px,4vw,40px)">
+<div style="text-align:center;margin-bottom:40px">
+<span data-en="PRICING" style="display:inline-block;padding:6px 14px;background:#E7EDE2;border:1px solid rgba(30,74,47,.14);border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.14em;color:#2C4A34">PRECIOS</span>
+<h2 data-en="Simple plans. No surprises." style="margin:20px 0 14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(28px,3.6vw,44px);line-height:1.08;letter-spacing:-.045em;font-weight:800">Planes simples. Sin sorpresas.</h2>
+<p data-en="14 days free on every plan. No credit card required." style="margin:0 0 26px;font-size:15.5px;color:#5A5D4D">14 días gratis en todos los planes. Sin tarjeta de crédito.</p>
+<div style="display:inline-flex;align-items:center;gap:4px;padding:4px;background:#fff;border:1px solid rgba(23,25,15,.1);border-radius:11px">
+<button onClick="{{ setMonthly }}" style="padding:9px 18px;border:0;border-radius:8px;font-family:'Manrope',sans-serif;font-size:13px;font-weight:700;cursor:pointer;background:{{ mBg }};color:{{ mFg }}"><span data-en="Monthly">Mensual</span></button>
+<button onClick="{{ setYearly }}" style="display:flex;align-items:center;gap:7px;padding:9px 18px;border:0;border-radius:8px;font-family:'Manrope',sans-serif;font-size:13px;font-weight:700;cursor:pointer;background:{{ yBg }};color:{{ yFg }}"><span data-en="Yearly">Anual</span><span data-en="2 months free" style="padding:2px 7px;border-radius:999px;background:#DCF3D6;color:#2C4A34;font-size:10px;font-weight:700">2 meses gratis</span></button>
+</div>
+</div>
+<div data-pricing-grid="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:20px;align-items:start">
+<div style="background:#fff;border:1px solid rgba(23,25,15,.09);border-radius:18px;padding:30px">
+<h3 data-en="Essential" style="margin:0 0 6px;font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:700;letter-spacing:-.025em">Esencial</h3>
+<p data-en="For solo professionals starting out." style="margin:0 0 22px;font-size:13px;line-height:1.5;color:#7A7D6C">Para profesionales independientes que empiezan.</p>
+<div style="display:flex;align-items:baseline;gap:5px;margin-bottom:4px"><span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:44px;font-weight:800;letter-spacing:-.05em">{{ p1 }}</span><span style="font-size:14px;font-weight:600;color:#7A7D6C">{{ per }}</span></div>
+<div style="font-size:12px;color:#9A9D8C;margin-bottom:24px">{{ billNote }}</div>
+<a href="https://app.calendando.com/" data-en="Start free" style="display:block;text-align:center;padding:13px;background:#F2F1EA;color:#17190F;border-radius:11px;font-size:14px;font-weight:700;margin-bottom:24px" style-hover="background:#E7EDE2;color:#17190F">Empezar gratis</a>
+<div style="display:flex;flex-direction:column;gap:11px">
+<div style="display:flex;gap:10px;align-items:start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="2.4" style="flex:none;margin-top:2px"><path d="M5 13l4.2 4.2L19 7"></path></svg><span data-en="1 calendar, 1 staff member" style="font-size:13.5px;line-height:1.45;color:#4A4D3E">1 agenda, 1 miembro del equipo</span></div>
+<div style="display:flex;gap:10px;align-items:start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="2.4" style="flex:none;margin-top:2px"><path d="M5 13l4.2 4.2L19 7"></path></svg><span data-en="Up to 150 bookings / month" style="font-size:13.5px;line-height:1.45;color:#4A4D3E">Hasta 150 reservas / mes</span></div>
+<div style="display:flex;gap:10px;align-items:start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="2.4" style="flex:none;margin-top:2px"><path d="M5 13l4.2 4.2L19 7"></path></svg><span data-en="WhatsApp booking &amp; reminders" style="font-size:13.5px;line-height:1.45;color:#4A4D3E">Reservas y recordatorios por WhatsApp</span></div>
+<div style="display:flex;gap:10px;align-items:start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="2.4" style="flex:none;margin-top:2px"><path d="M5 13l4.2 4.2L19 7"></path></svg><span data-en="Email support" style="font-size:13.5px;line-height:1.45;color:#4A4D3E">Soporte por correo</span></div>
+</div>
+</div>
+<div style="position:relative;background:#17301F;border:1px solid #17301F;border-radius:18px;padding:30px;box-shadow:0 20px 44px rgba(23,48,31,.24)">
+<span data-en="Most popular" style="position:absolute;top:-11px;left:30px;padding:5px 12px;background:#DCF3D6;color:#17301F;border-radius:999px;font-size:10.5px;font-weight:800;letter-spacing:.06em">Más popular</span>
+<h3 data-en="Professional" style="margin:0 0 6px;font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:700;letter-spacing:-.025em;color:#fff">Profesional</h3>
+<p data-en="For growing teams and busy calendars." style="margin:0 0 22px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.6)">Para equipos en crecimiento y agendas ocupadas.</p>
+<div style="display:flex;align-items:baseline;gap:5px;margin-bottom:4px"><span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:44px;font-weight:800;letter-spacing:-.05em;color:#fff">{{ p2 }}</span><span style="font-size:14px;font-weight:600;color:rgba(255,255,255,.6)">{{ per }}</span></div>
+<div style="font-size:12px;color:rgba(255,255,255,.45);margin-bottom:24px">{{ billNote }}</div>
+<a href="https://app.calendando.com/" data-en="Start free trial" style="display:block;text-align:center;padding:13px;background:#fff;color:#17301F;border-radius:11px;font-size:14px;font-weight:700;margin-bottom:24px" style-hover="background:#DCF3D6;color:#17301F">Iniciar prueba gratis</a>
+<div style="display:flex;flex-direction:column;gap:11px">
+<div style="display:flex;gap:10px;align-items:start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8FBF9F" stroke-width="2.4" style="flex:none;margin-top:2px"><path d="M5 13l4.2 4.2L19 7"></path></svg><span data-en="Up to 8 staff members" style="font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.82)">Hasta 8 miembros del equipo</span></div>
+<div style="display:flex;gap:10px;align-items:start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8FBF9F" stroke-width="2.4" style="flex:none;margin-top:2px"><path d="M5 13l4.2 4.2L19 7"></path></svg><span data-en="Unlimited bookings" style="font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.82)">Reservas ilimitadas</span></div>
+<div style="display:flex;gap:10px;align-items:start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8FBF9F" stroke-width="2.4" style="flex:none;margin-top:2px"><path d="M5 13l4.2 4.2L19 7"></path></svg><span data-en="Automations &amp; custom messages" style="font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.82)">Automatizaciones y mensajes personalizados</span></div>
+<div style="display:flex;gap:10px;align-items:start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8FBF9F" stroke-width="2.4" style="flex:none;margin-top:2px"><path d="M5 13l4.2 4.2L19 7"></path></svg><span data-en="Reports &amp; integrations" style="font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.82)">Reportes e integraciones</span></div>
+<div style="display:flex;gap:10px;align-items:start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8FBF9F" stroke-width="2.4" style="flex:none;margin-top:2px"><path d="M5 13l4.2 4.2L19 7"></path></svg><span data-en="Priority support" style="font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.82)">Soporte prioritario</span></div>
+</div>
+</div>
+<div style="background:#fff;border:1px solid rgba(23,25,15,.09);border-radius:18px;padding:30px">
+<h3 data-en="Clinics" style="margin:0 0 6px;font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:700;letter-spacing:-.025em">Clínicas</h3>
+<p data-en="For clinics and multi-location operations." style="margin:0 0 22px;font-size:13px;line-height:1.5;color:#7A7D6C">Para clínicas y negocios con varias sedes.</p>
+<div style="display:flex;align-items:baseline;gap:5px;margin-bottom:4px"><span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:44px;font-weight:800;letter-spacing:-.05em">{{ p3 }}</span><span style="font-size:14px;font-weight:600;color:#7A7D6C">{{ per }}</span></div>
+<div style="font-size:12px;color:#9A9D8C;margin-bottom:24px">{{ billNote }}</div>
+<a href="https://app.calendando.com/" data-en="Talk to sales" style="display:block;text-align:center;padding:13px;background:#F2F1EA;color:#17190F;border-radius:11px;font-size:14px;font-weight:700;margin-bottom:24px" style-hover="background:#E7EDE2;color:#17190F">Iniciar Prueba gratis</a>
+<div style="display:flex;flex-direction:column;gap:11px">
+<div style="display:flex;gap:10px;align-items:start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="2.4" style="flex:none;margin-top:2px"><path d="M5 13l4.2 4.2L19 7"></path></svg><span data-en="Unlimited staff &amp; locations" style="font-size:13.5px;line-height:1.45;color:#4A4D3E">Equipo y sedes ilimitadas</span></div>
+<div style="display:flex;gap:10px;align-items:start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="2.4" style="flex:none;margin-top:2px"><path d="M5 13l4.2 4.2L19 7"></path></svg><span data-en="Roles &amp; permissions" style="font-size:13.5px;line-height:1.45;color:#4A4D3E">Roles y permisos</span></div>
+<div style="display:flex;gap:10px;align-items:start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="2.4" style="flex:none;margin-top:2px"><path d="M5 13l4.2 4.2L19 7"></path></svg><span data-en="API &amp; custom onboarding" style="font-size:13.5px;line-height:1.45;color:#4A4D3E">API e implementación asistida</span></div>
+<div style="display:flex;gap:10px;align-items:start"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3A7D53" stroke-width="2.4" style="flex:none;margin-top:2px"><path d="M5 13l4.2 4.2L19 7"></path></svg><span data-en="Dedicated account manager" style="font-size:13.5px;line-height:1.45;color:#4A4D3E">Gerente de cuenta dedicado</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="recursos" style="background:#F8F7F2">
+
+</section>
+
+<section style="background:#F8F7F2">
+<div style="max-width:840px;margin:0 auto;padding:24px clamp(20px,4vw,40px) clamp(56px,7vw,88px)">
+<h2 data-en="Frequent questions" style="margin:0 0 32px;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(25px,3.1vw,38px);line-height:1.1;letter-spacing:-.045em;font-weight:800">Preguntas frecuentes</h2>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="background:#fff;border:1px solid rgba(23,25,15,.09);border-radius:14px;overflow:hidden">
+<button onClick="{{ f0 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:transparent;border:0;text-align:left;cursor:pointer;font-family:'Manrope',sans-serif"><span data-en="Do my clients need to install anything?" style="font-size:15.5px;font-weight:700;letter-spacing:-.02em;color:#17190F">¿Mis clientes necesitan instalar algo?</span><span style="font-size:20px;color:#3A7D53;flex:none">{{ s0 }}</span></button>
+<div style="display:{{ d0 }};padding:0 24px 20px"><p data-en="No. Everything happens inside the WhatsApp they already use. No apps, no accounts, no passwords." style="margin:0;font-size:14.5px;line-height:1.62;color:#5A5D4D">No. Las notificaciones se envían directo al WhatsApp de la persona. Sin apps, sin cuentas, sin contraseñas.</p></div>
+</div>
+<div style="background:#fff;border:1px solid rgba(23,25,15,.09);border-radius:14px;overflow:hidden">
+<button onClick="{{ f1 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:transparent;border:0;text-align:left;cursor:pointer;font-family:'Manrope',sans-serif"><span data-en="Can I keep my current phone number?" style="font-size:15.5px;font-weight:700;letter-spacing:-.02em;color:#17190F">¿Puedo conservar mi número actual?</span><span style="font-size:20px;color:#3A7D53;flex:none">{{ s1 }}</span></button>
+<div style="display:{{ d1 }};padding:0 24px 20px"><p data-en="Yes. Connect your existing business number so clients keep writing to the contact they already know." style="margin:0;font-size:14.5px;line-height:1.62;color:#5A5D4D">Si. Aunque las notificaciones se enviaran desde otro numero de WhatsApp. Si deseas que las notificaciones se envíen desde tu mismo numero telefónico contactanos.</p></div>
+</div>
+<div style="background:#fff;border:1px solid rgba(23,25,15,.09);border-radius:14px;overflow:hidden">
+<button onClick="{{ f2 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:transparent;border:0;text-align:left;cursor:pointer;font-family:'Manrope',sans-serif"><span data-en="What happens if two people book the same slot?" style="font-size:15.5px;font-weight:700;letter-spacing:-.02em;color:#17190F">¿Qué pasa si dos personas reservan el mismo horario?</span><span style="font-size:20px;color:#3A7D53;flex:none">{{ s2 }}</span></button>
+<div style="display:{{ d2 }};padding:0 24px 20px"><p data-en="It can't happen. Availability updates in real time and a slot disappears the moment it is taken." style="margin:0;font-size:14.5px;line-height:1.62;color:#5A5D4D">No puede pasar. La disponibilidad se actualiza en tiempo real y un horario desaparece en el momento en que se ocupa.</p></div>
+</div>
+<div style="background:#fff;border:1px solid rgba(23,25,15,.09);border-radius:14px;overflow:hidden">
+<button onClick="{{ f3 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:transparent;border:0;text-align:left;cursor:pointer;font-family:'Manrope',sans-serif"><span data-en="Does it work with my team's schedules?" style="font-size:15.5px;font-weight:700;letter-spacing:-.02em;color:#17190F">¿Funciona con los horarios de mi equipo?</span><span style="font-size:20px;color:#3A7D53;flex:none">{{ s3 }}</span></button>
+<div style="display:{{ d3 }};padding:0 24px 20px"><p data-en="Yes. Each staff member has their own hours, services and days off — Calendando only offers what is truly free." style="margin:0;font-size:14.5px;line-height:1.62;color:#5A5D4D">Sí. Cada miembro tiene sus propios horarios, servicios y días libres; Calendando solo ofrece lo que está realmente disponible.</p></div>
+</div>
+<div style="background:#fff;border:1px solid rgba(23,25,15,.09);border-radius:14px;overflow:hidden">
+<button onClick="{{ f4 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:transparent;border:0;text-align:left;cursor:pointer;font-family:'Manrope',sans-serif"><span data-en="Can I cancel whenever I want?" style="font-size:15.5px;font-weight:700;letter-spacing:-.02em;color:#17190F">¿Puedo cancelar cuando quiera?</span><span style="font-size:20px;color:#3A7D53;flex:none">{{ s4 }}</span></button>
+<div style="display:{{ d4 }};padding:0 24px 20px"><p data-en="Always. No lock-in contracts and no cancellation fees." style="margin:0;font-size:14.5px;line-height:1.62;color:#5A5D4D">Siempre. Sin contratos de permanencia y sin cargos por cancelación.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contacto" style="background:#F8F7F2">
+<div style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,40px) clamp(56px,7vw,88px)">
+<div style="background:#E7EDE2;border:1px solid rgba(30,74,47,.16);border-radius:20px;padding:clamp(26px,3.2vw,40px) clamp(24px,3.4vw,44px);display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap">
+<div style="display:flex;align-items:center;gap:22px">
+<div style="width:56px;height:56px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;flex:none"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2F6B44" stroke-width="1.9" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"></rect><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"></path></svg></div>
+<div>
+<h2 data-en="Ready to transform your calendar?" style="margin:0 0 8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(21px,2.4vw,27px);line-height:1.14;letter-spacing:-.04em;font-weight:800">¿Listo para transformar tu agenda?</h2>
+<p data-en="Join hundreds of professionals already saving time and growing with Calendando." style="margin:0;font-size:14.5px;line-height:1.55;color:#4A6A52">Únete a cientos de profesionales que ya ahorran tiempo y hacen crecer su negocio con Calendando.</p>
+</div>
+</div>
+<div style="text-align:center">
+<a href="https://app.calendando.com/" style="display:flex;align-items:center;gap:10px;padding:15px 24px;background:#1E4A2F;color:#fff;border-radius:12px;font-size:15px;font-weight:700;box-shadow:0 6px 18px rgba(30,74,47,.22)" style-hover="background:#17381F;color:#fff"><span data-en="Free 14-day trial">Prueba gratis 14 días</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></a>
+<div data-en="No credit card" style="margin-top:10px;font-size:12.5px;color:#5A7A62">Sin tarjeta de crédito</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="background:#17301F;color:#fff">
+<div style="max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,60px) clamp(20px,4vw,40px) 32px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)">
+<div>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+<svg width="26" height="26" viewBox="0 0 28 28" fill="none"><rect x="1.4" y="1.4" width="25.2" height="25.2" rx="7" stroke="#8FBF9F" stroke-width="2.2"></rect><path d="M8 14.6 L12.2 18.6 L20.2 9.6" stroke="#8FBF9F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:19px;letter-spacing:-.03em;color:#fff">Calendando</span>
+</div>
+<p data-en="The all-in-one appointment platform that works where your clients already are." style="margin:0;max-width:280px;font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.55)">La plataforma todo-en-uno de citas que funciona donde tus clientes ya están.</p>
+</div>
+<div>
+<div data-en="Product" style="font-size:11px;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,.42);margin-bottom:16px">PRODUCTO</div>
+<div style="display:flex;flex-direction:column;gap:11px;font-size:13.5px">
+<a href="#funciones" data-en="Features" style="color:rgba(255,255,255,.78)" style-hover="color:#fff">Funciones</a>
+<a href="#precios" data-en="Pricing" style="color:rgba(255,255,255,.78)" style-hover="color:#fff">Precios</a>
+<a href="#para-quien" data-en="Integrations" style="color:rgba(255,255,255,.78)" style-hover="color:#fff">Integraciones</a>
+<a href="#contacto" data-en="Book a demo" style="color:rgba(255,255,255,.78)" style-hover="color:#fff">Agendar una demo</a>
+</div>
+</div>
+<div>
+<div data-en="Resources" style="font-size:11px;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,.42);margin-bottom:16px">RECURSOS</div>
+<div style="display:flex;flex-direction:column;gap:11px;font-size:13.5px">
+<a href="#recursos" data-en="Blog" style="color:rgba(255,255,255,.78)" style-hover="color:#fff">Blog</a>
+<a href="#recursos" data-en="Help center" style="color:rgba(255,255,255,.78)" style-hover="color:#fff">Centro de ayuda</a>
+
+<a href="#recursos" data-en="Status" style="color:rgba(255,255,255,.78)" style-hover="color:#fff">Estado del servicio</a>
+</div>
+</div>
+<div>
+<div data-en="Company" style="font-size:11px;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,.42);margin-bottom:16px">EMPRESA</div>
+<div style="display:flex;flex-direction:column;gap:11px;font-size:13.5px">
+<a href="#contacto" data-en="Contact" style="color:rgba(255,255,255,.78)" style-hover="color:#fff">Contacto</a>
+<a href="#contacto" data-en="Privacy" style="color:rgba(255,255,255,.78)" style-hover="color:#fff">Privacidad</a>
+<a href="#contacto" data-en="Terms" style="color:rgba(255,255,255,.78)" style-hover="color:#fff">Términos</a>
+
+</div>
+</div>
+</div>
+<div style="padding-top:24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+<div data-en="© 2026 Calendando. All rights reserved." style="font-size:12.5px;color:rgba(255,255,255,.45)">© 2026 Calendando. Todos los derechos reservados.</div>
+<div style="display:flex;gap:8px">
+<button onClick="{{ pickEs }}" style="padding:7px 13px;border:1px solid rgba(255,255,255,.18);border-radius:8px;background:{{ esFootBg }};color:#fff;font-family:'Manrope',sans-serif;font-size:12.5px;font-weight:600;cursor:pointer">Español</button>
+<button onClick="{{ pickEn }}" style="padding:7px 13px;border:1px solid rgba(255,255,255,.18);border-radius:8px;background:{{ enFootBg }};color:#fff;font-family:'Manrope',sans-serif;font-size:12.5px;font-weight:600;cursor:pointer">English</button>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;es&quot;,&quot;en&quot;],&quot;default&quot;:&quot;es&quot;,&quot;tsType&quot;:&quot;'es'|'en'&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;defaultYearly&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  rootRef = React.createRef();
+  state = { yearly: !!this.props.defaultYearly, faq: 0, langMenu: false, mobileMenu: false };
+  lang = null;
+
+  currentLang() {
+    return this.lang || this.props.lang || 'es';
+  }
+
+  componentDidMount() { this.applyLang(); this.setupMotion(); }
+
+  setupMotion() {
+    const root = this.rootRef.current;
+    if (!root || this.motionDone) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    this.motionDone = true;
+
+    root.querySelectorAll('a, button').forEach(n => {
+      n.style.transition = 'background-color .28s ease, color .22s ease, border-color .28s ease, transform .24s ease, box-shadow .3s ease';
+    });
+    root.querySelectorAll('section > div > div > div, footer a').forEach(n => {
+      if (!n.style.transition) n.style.transition = 'transform .35s cubic-bezier(.2,.8,.3,1), border-color .3s ease, box-shadow .35s ease';
+    });
+
+    const hero = root.querySelector('section#top');
+    if (hero) {
+      const phone = hero.querySelector('div[style*="border-radius:40px"]');
+      if (phone) phone.style.animation = 'om-float 7s ease-in-out infinite';
+      const dot = hero.querySelector('span[style*="border-radius:999px;background:#3A7D53"]');
+      if (dot) dot.style.animation = 'om-pulse 2.6s ease-out infinite';
+      let d = 0;
+      hero.querySelectorAll(':scope > div > div:first-child > *').forEach(n => {
+        n.style.animation = `om-rise .8s cubic-bezier(.2,.8,.3,1) ${d}s both`;
+        n.style.transition = `opacity .7s ease ${d}s`;
+        n.style.opacity = '1';
+        d += 0.09;
+      });
+      const visual = hero.querySelector('[data-hero-visual]');
+      if (visual) visual.style.animation = 'om-rise 1s cubic-bezier(.2,.8,.3,1) .18s both';
+    }
+
+    this.animateHeroData(root);
+
+    const targets = [];
+    root.querySelectorAll('section:not(#top), footer').forEach(sec => {
+      sec.querySelectorAll(':scope > div > *').forEach(child => {
+        if (child.children.length > 2 && child.tagName === 'DIV') {
+          Array.from(child.children).forEach(g => targets.push(g));
+        } else targets.push(child);
+      });
+    });
+    const pending = [];
+    targets.forEach((n, i) => {
+      if (n.style.animation) return;
+      n.style.opacity = '0';
+      n.dataset.omIdx = String(i % 6);
+      pending.push(n);
+    });
+    this.pending = pending;
+
+    const reveal = (n) => {
+      const i = Number(n.dataset.omIdx || 0);
+      const d = Math.min(i, 5) * 0.07;
+      n.style.animation = `om-rise .75s cubic-bezier(.2,.8,.3,1) ${d}s both`;
+      n.style.transition = `opacity .6s ease ${d}s`;
+      n.style.opacity = '1';
+    };
+    const check = () => {
+      const h = window.innerHeight || 800;
+      for (let i = this.pending.length - 1; i >= 0; i--) {
+        const n = this.pending[i];
+        const r = n.getBoundingClientRect();
+        if (r.top < h * 0.92 && r.bottom > -80) { reveal(n); this.pending.splice(i, 1); }
+      }
+      if (!this.pending.length) teardown();
+    };
+    const onScroll = () => {
+      if (this.raf) return;
+      this.raf = requestAnimationFrame(() => { this.raf = null; check(); });
+    };
+    const teardown = () => {
+      window.removeEventListener('scroll', onScroll, true);
+      document.removeEventListener('scroll', onScroll, true);
+      window.removeEventListener('resize', onScroll);
+      clearTimeout(this.safety);
+    };
+    this.teardown = teardown;
+    window.addEventListener('scroll', onScroll, true);
+    document.addEventListener('scroll', onScroll, true);
+    window.addEventListener('resize', onScroll);
+    check();
+    // safety net: never leave content hidden if scroll events never arrive
+    this.safety = setTimeout(() => { this.pending.slice().forEach(reveal); this.pending.length = 0; teardown(); }, 2500);
+  }
+
+  animateHeroData(root) {
+    const card = root.querySelector('[data-hero-card]');
+    if (card) {
+      const events = card.querySelectorAll('div[style*="border-left:3px solid"], div[style*="border-left: 3px solid"]');
+      events.forEach((n, i) => {
+        n.style.animation = `om-book .55s cubic-bezier(.2,.9,.3,1) ${0.55 + i * 0.28}s both`;
+      });
+    }
+    const stats = root.querySelector('[data-hero-stats]');
+    if (!stats) return;
+    stats.querySelectorAll(':scope > div').forEach((cell, i) => {
+      const el = Array.from(cell.children).find(c => /\d/.test(c.textContent) && c.textContent.trim().length < 8);
+      if (!el) return;
+      const raw = el.textContent.trim();
+      const m = raw.match(/^([^\d]*)(\d+(?:[.,]\d+)?)(.*)$/);
+      if (!m) return;
+      const [, pre, num, post] = m;
+      const target = parseFloat(num.replace(',', '.'));
+      const dec = num.includes('.') || num.includes(',') ? 1 : 0;
+      const dur = 1300, delay = 700 + i * 140;
+      if (document.visibilityState === 'hidden') return;
+      el.textContent = pre + (0).toFixed(dec) + post;
+      const safety = setTimeout(() => { el.textContent = raw; }, delay + dur + 900);
+      const start = performance.now() + delay;
+      const step = (t) => {
+        const p = Math.max(0, Math.min(1, (t - start) / dur));
+        const e = 1 - Math.pow(1 - p, 3);
+        el.textContent = pre + (target * e).toFixed(dec) + post;
+        if (p < 1) requestAnimationFrame(step);
+        else { el.textContent = raw; clearTimeout(safety); }
+      };
+      requestAnimationFrame(step);
+    });
+  }
+
+  componentWillUnmount() { if (this.teardown) this.teardown(); }
+  componentDidUpdate() { this.applyLang(); }
+
+  applyLang() {
+    const root = this.rootRef.current;
+    if (!root) return;
+    const en = this.currentLang() === 'en';
+    root.querySelectorAll('[data-en]').forEach(n => {
+      if (n.dataset.es === undefined) n.dataset.es = n.textContent;
+      const t = en ? n.dataset.en : n.dataset.es;
+      if (t !== undefined && n.textContent !== t) n.textContent = t;
+    });
+  }
+
+  setLang = (l) => { this.lang = l; this.setState({ langMenu: false, mobileMenu: false }); };
+  toggleMobileMenu = () => this.setState(s => ({ mobileMenu: !s.mobileMenu }));
+  closeMobileMenu = () => this.setState({ mobileMenu: false });
+
+  prices(en) {
+    return this.state.yearly ? ['$15', '$31', '$63'] : ['€19', '€39', '€79'];
+  }
+
+  renderVals() {
+    const en = this.currentLang() === 'en';
+    const p = this.prices(en);
+    const on = { background: '#17301F', color: '#fff' };
+    const off = { background: 'transparent', color: '#5A5D4D' };
+    const faqSign = i => (this.state.faq === i ? '−' : '+');
+    const faqDisp = i => (this.state.faq === i ? 'block' : 'none');
+    return {
+      rootRef: this.rootRef,
+      langLabel: en ? 'EN' : 'ES',
+      langMenuDisplay: this.state.langMenu ? 'flex' : 'none',
+      mobileMenuDisplay: this.state.mobileMenu ? 'flex' : 'none',
+      toggleMobileMenu: this.toggleMobileMenu,
+      closeMobileMenu: this.closeMobileMenu,
+      toggleLangMenu: () => this.setState(s => ({ langMenu: !s.langMenu })),
+      pickEs: () => this.setLang('es'),
+      pickEn: () => this.setLang('en'),
+      esFootBg: en ? 'transparent' : 'rgba(255,255,255,.16)',
+      enFootBg: en ? 'rgba(255,255,255,.16)' : 'transparent',
+      setMonthly: () => this.setState({ yearly: false }),
+      setYearly: () => this.setState({ yearly: true }),
+      mBg: this.state.yearly ? off.background : on.background,
+      mFg: this.state.yearly ? off.color : on.color,
+      yBg: this.state.yearly ? on.background : off.background,
+      yFg: this.state.yearly ? on.color : off.color,
+      p1: p[0], p2: p[1], p3: p[2],
+      per: en ? '/ month' : '/ mes',
+      billNote: this.state.yearly
+        ? (en ? 'Billed yearly · 2 months free' : 'Facturado anualmente · 2 meses gratis')
+        : (en ? 'Billed monthly · VAT excl.' : 'Facturado mensualmente · IVA incluido'),
+      f0: () => this.setState(s => ({ faq: s.faq === 0 ? -1 : 0 })),
+      f1: () => this.setState(s => ({ faq: s.faq === 1 ? -1 : 1 })),
+      f2: () => this.setState(s => ({ faq: s.faq === 2 ? -1 : 2 })),
+      f3: () => this.setState(s => ({ faq: s.faq === 3 ? -1 : 3 })),
+      f4: () => this.setState(s => ({ faq: s.faq === 4 ? -1 : 4 })),
+      s0: faqSign(0), s1: faqSign(1), s2: faqSign(2), s3: faqSign(3), s4: faqSign(4),
+      d0: faqDisp(0), d1: faqDisp(1), d2: faqDisp(2), d3: faqDisp(3), d4: faqDisp(4)
+    };
+  }
+}
+</script>
+</body>
+</html>
