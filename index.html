@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendando — Agenda Inteligente por WhatsApp</title>
+    <meta name="description" content="Calendando: plataforma de agendamiento inteligente por WhatsApp. Elimina citas dobles, reduce ausencias y ahorra horas de trabajo administrativo.">
+    <meta name="keywords" content="agendamiento, citas, WhatsApp, automatización, clínicas, salones, profesionales">
+    <meta name="author" content="Calendando">
+    <meta property="og:title" content="Calendando — Agenda Inteligente por WhatsApp">
+    <meta property="og:description" content="Automatiza tus citas, recordatorios y confirmaciones directamente por WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo">
+                <div class="logo-icon">
+                    <img src="logo.svg" alt="Calendando Logo" width="28" height="28" style="display: block;">
+                </div>
+                <span class="logo-text">Calendando</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#features" data-i18n="nav.features">Funcionalidades</a></li>
+                <li><a href="#how-it-works" data-i18n="nav.howItWorks">Cómo Funciona</a></li>
+                <li><a href="#pricing" data-i18n="nav.pricing">Planes</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma">
+                    <span class="lang-active" id="lang-label">ES</span>
+                    <span class="lang-separator">|</span>
+                    <span class="lang-inactive" id="lang-alt-label">EN</span>
+                </button>
+                <a href="https://app.calendando.com/" class="btn btn-nav" data-i18n="nav.cta">Prueba Gratis</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-shapes">
+            <div class="hero-blob hero-blob-1"></div>
+            <div class="hero-blob hero-blob-2"></div>
+            <div class="hero-blob hero-blob-3"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="hero-badge" data-i18n="hero.badge">📲 Agendamiento por WhatsApp</div>
+                <h1 class="hero-title" data-i18n="hero.title">
+                    Automatiza tus Citas y<br>
+                    <span class="gradient-text">Olvídate del Caos</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">
+                    Calendando elimina las citas dobles, reduce las ausencias y ahorra horas de trabajo administrativo automatizando reservas, recordatorios y confirmaciones directamente por WhatsApp.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="https://app.calendando.com/" class="btn btn-primary btn-lg" data-i18n="hero.ctaPrimary">
+                        Comienza Gratis
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#how-it-works" class="btn btn-outline btn-lg" data-i18n="hero.ctaSecondary">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polygon points="8,5 16,10 8,15" fill="currentColor"/></svg>
+                        Ver Cómo Funciona
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">95%</span>
+                        <span class="hero-stat-label" data-i18n="hero.stat1">Menos ausencias</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">10h+</span>
+                        <span class="hero-stat-label" data-i18n="hero.stat2">Ahorradas por semana</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">0</span>
+                        <span class="hero-stat-label" data-i18n="hero.stat3">Citas dobles</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <!-- WhatsApp Chat Simulation -->
+                            <div class="wa-header">
+                                <div class="wa-header-avatar">C</div>
+                                <div class="wa-header-info">
+                                    <span class="wa-header-name">Calendando</span>
+                                    <span class="wa-header-status">en línea</span>
+                                </div>
+                            </div>
+                            <div class="wa-chat">
+                                <div class="wa-message wa-incoming wa-animate-1">
+                                    <p>¡Hola María! 👋 Tu cita con <strong>Dra. García</strong> es mañana a las <strong>10:00 AM</strong>.</p>
+                                    <span class="wa-time">9:00 AM</span>
+                                </div>
+                                <div class="wa-message wa-incoming wa-animate-2">
+                                    <p>¿Confirmas tu asistencia?</p>
+                                    <div class="wa-buttons">
+                                        <button class="wa-btn wa-btn-confirm">✅ Confirmar</button>
+                                        <button class="wa-btn wa-btn-reschedule">📅 Reagendar</button>
+                                    </div>
+                                    <span class="wa-time">9:00 AM</span>
+                                </div>
+                                <div class="wa-message wa-outgoing wa-animate-3">
+                                    <p>✅ Confirmar</p>
+                                    <span class="wa-time">9:02 AM <svg width="15" height="11" viewBox="0 0 16 11" fill="none" style="margin-left:2px;vertical-align:middle"><path d="M11.5 2.5L7 7L5.5 5.5" stroke="#53BDEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 2.5L11 7L9.5 5.5" stroke="#53BDEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                </div>
+                                <div class="wa-message wa-incoming wa-animate-4">
+                                    <p>¡Perfecto! Tu cita está confirmada. 🎉 Te esperamos mañana.</p>
+                                    <span class="wa-time">9:02 AM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Floating Cards -->
+                <div class="floating-card float-card-1">
+                    <div class="float-icon float-icon-green">✓</div>
+                    <div class="float-text">
+                        <span class="float-title" data-i18n="hero.float1Title">Cita Confirmada</span>
+                        <span class="float-desc" data-i18n="hero.float1Desc">Dra. García — 10:00 AM</span>
+                    </div>
+                </div>
+                <div class="floating-card float-card-2">
+                    <div class="float-icon float-icon-purple">📊</div>
+                    <div class="float-text">
+                        <span class="float-title" data-i18n="hero.float2Title">Tasa de asistencia</span>
+                        <span class="float-desc highlight">98.5%</span>
+                    </div>
+                </div>
+                <div class="floating-card float-card-3">
+                    <div class="float-icon float-icon-teal">🔔</div>
+                    <div class="float-text">
+                        <span class="float-title" data-i18n="hero.float3Title">Recordatorio enviado</span>
+                        <span class="float-desc" data-i18n="hero.float3Desc">Hace 2 min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Trusted By -->
+    <section class="social-proof" id="social-proof">
+        <div class="container">
+            <div class="social-proof-header">
+                <span class="social-proof-check">✓</span>
+                <p class="social-proof-title" data-i18n="social.title">Cualquier negocio puede usar <strong>Calendando</strong></p>
+            </div>
+            <p class="social-proof-subtitle" data-i18n="social.subtitle">Desde clínicas y salones de belleza hasta consultorios y centros de bienestar, Calendando se adapta a tu industria.</p>
+            <div class="industry-carousel">
+                <div class="industry-track">
+                    <div class="industry-item">
+                        <div class="industry-icon">🏥</div>
+                        <span data-i18n="social.industry1">Clínicas</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">💇</div>
+                        <span data-i18n="social.industry2">Salones de Belleza</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">🦷</div>
+                        <span data-i18n="social.industry3">Consultorios Dentales</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">🧘</div>
+                        <span data-i18n="social.industry4">Centros de Bienestar</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">🏋️</div>
+                        <span data-i18n="social.industry5">Gimnasios</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">🐾</div>
+                        <span data-i18n="social.industry6">Veterinarias</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">⚖️</div>
+                        <span data-i18n="social.industry7">Abogados</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">📚</div>
+                        <span data-i18n="social.industry8">Tutores</span>
+                    </div>
+                    <!-- Duplicated for seamless scroll -->
+                    <div class="industry-item">
+                        <div class="industry-icon">🏥</div>
+                        <span data-i18n="social.industry1">Clínicas</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">💇</div>
+                        <span data-i18n="social.industry2">Salones de Belleza</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">🦷</div>
+                        <span data-i18n="social.industry3">Consultorios Dentales</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">🧘</div>
+                        <span data-i18n="social.industry4">Centros de Bienestar</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">🏋️</div>
+                        <span data-i18n="social.industry5">Gimnasios</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">🐾</div>
+                        <span data-i18n="social.industry6">Veterinarias</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">⚖️</div>
+                        <span data-i18n="social.industry7">Abogados</span>
+                    </div>
+                    <div class="industry-item">
+                        <div class="industry-icon">📚</div>
+                        <span data-i18n="social.industry8">Tutores</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="features.tag">Funcionalidades</span>
+                <h2 class="section-title" data-i18n="features.title">Todo lo que Necesitas<br><span class="gradient-text">en Una Sola Plataforma</span></h2>
+                <p class="section-subtitle" data-i18n="features.subtitle">Herramientas poderosas diseñadas para simplificar tu día a día y hacer crecer tu negocio.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card feature-card-large" id="feature-whatsapp">
+                    <div class="feature-card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.44 1.64 6.32L3 29l6.88-1.6A12.94 12.94 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z" fill="#25D366"/>
+                            <path d="M22.5 19.14c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.95-1.79-2.12-2-2.48-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.61-.81-.62h-.69c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3s1.29 3.48 1.47 3.72c.18.24 2.54 3.87 6.15 5.43.86.37 1.53.59 2.05.76.86.27 1.65.23 2.27.14.69-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z" fill="white"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title" data-i18n="features.f1Title">Automatización por WhatsApp</h3>
+                    <p class="feature-card-desc" data-i18n="features.f1Desc">Envía confirmaciones, recordatorios y seguimientos automáticos por el canal que tus clientes ya usan. Sin apps adicionales.</p>
+                    <div class="feature-card-visual">
+                        <div class="mini-chat">
+                            <div class="mini-msg mini-incoming">📅 Recordatorio: Cita mañana 3:00 PM</div>
+                            <div class="mini-msg mini-outgoing">✅ ¡Confirmado!</div>
+                            <div class="mini-msg mini-incoming">¡Genial! Te esperamos 🎉</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card" id="feature-calendar">
+                    <div class="feature-card-icon feature-icon-purple">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <rect x="3" y="5" width="22" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <line x1="3" y1="11" x2="25" y2="11" stroke="currentColor" stroke-width="2"/>
+                            <line x1="9" y1="3" x2="9" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="19" y1="3" x2="19" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="10" cy="17" r="2" fill="currentColor"/>
+                            <circle cx="18" cy="17" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title" data-i18n="features.f2Title">Calendario Inteligente</h3>
+                    <p class="feature-card-desc" data-i18n="features.f2Desc">Vista clara de todas tus citas. Sincronización con Google Calendar. Cero citas dobles, siempre.</p>
+                </div>
+                <div class="feature-card" id="feature-noshow">
+                    <div class="feature-card-icon feature-icon-teal">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9 14l3 3 7-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title" data-i18n="features.f3Title">Cero Ausencias</h3>
+                    <p class="feature-card-desc" data-i18n="features.f3Desc">Recordatorios automáticos y confirmaciones que reducen las ausencias hasta en un 95%.</p>
+                </div>
+                <div class="feature-card" id="feature-booking">
+                    <div class="feature-card-icon feature-icon-orange">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <rect x="4" y="6" width="20" height="16" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M4 12h20" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="10" cy="18" r="1.5" fill="currentColor"/>
+                            <circle cx="14" cy="18" r="1.5" fill="currentColor"/>
+                            <circle cx="18" cy="18" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title" data-i18n="features.f4Title">Reservas 24/7</h3>
+                    <p class="feature-card-desc" data-i18n="features.f4Desc">Tus clientes pueden agendar en cualquier momento, incluso fuera de horario. La agenda nunca para.</p>
+                </div>
+                <div class="feature-card" id="feature-analytics">
+                    <div class="feature-card-icon feature-icon-pink">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <rect x="4" y="18" width="4" height="6" rx="1" fill="currentColor"/>
+                            <rect x="10" y="12" width="4" height="12" rx="1" fill="currentColor" opacity="0.7"/>
+                            <rect x="16" y="8" width="4" height="16" rx="1" fill="currentColor" opacity="0.5"/>
+                            <rect x="22" y="4" width="4" height="20" rx="1" fill="currentColor" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title" data-i18n="features.f5Title">Reportes y Analíticas</h3>
+                    <p class="feature-card-desc" data-i18n="features.f5Desc">Visualiza métricas clave: tasas de asistencia, horarios más demandados y rendimiento de tu equipo.</p>
+                </div>
+                <div class="feature-card" id="feature-multi">
+                    <div class="feature-card-icon feature-icon-blue">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="14" cy="20" r="4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-card-title" data-i18n="features.f6Title">Multi-Profesional</h3>
+                    <p class="feature-card-desc" data-i18n="features.f6Desc">Gestiona múltiples profesionales, horarios y sucursales desde una sola cuenta. Perfecto para equipos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="howItWorks.tag">Cómo Funciona</span>
+                <h2 class="section-title" data-i18n="howItWorks.title">Tres Pasos para<br><span class="gradient-text">Olvidarte del Caos</span></h2>
+                <p class="section-subtitle" data-i18n="howItWorks.subtitle">Configura tu cuenta en minutos y empieza a recibir citas automáticamente.</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-card" id="step-1">
+                    <div class="step-number">1</div>
+                    <div class="step-visual">
+                        <div class="step-illustration step-illustration-1">
+                            <div class="step-icon-wrapper">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <rect x="8" y="6" width="32" height="36" rx="4" stroke="url(#stepGrad1)" stroke-width="2.5" fill="rgba(37,99,235,0.08)"/>
+                                    <circle cx="24" cy="22" r="6" stroke="url(#stepGrad1)" stroke-width="2"/>
+                                    <path d="M14 36c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="url(#stepGrad1)" stroke-width="2" stroke-linecap="round"/>
+                                    <defs><linearGradient id="stepGrad1" x1="0" y1="0" x2="48" y2="48"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#00C2A8"/></linearGradient></defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="step-title" data-i18n="howItWorks.step1Title">Configura tu Perfil</h3>
+                    <p class="step-desc" data-i18n="howItWorks.step1Desc">Agrega tus servicios, horarios y profesionales, y usa nuestro número de WhatsApp para enviar todas las notificaciones.</p>
+                </div>
+                <div class="step-connector">
+                    <svg width="60" height="20" viewBox="0 0 60 20"><path d="M0 10h50m0 0l-6-6m6 6l-6 6" stroke="url(#connGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><defs><linearGradient id="connGrad" x1="0" y1="0" x2="60" y2="0"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#00C2A8"/></linearGradient></defs></svg>
+                </div>
+                <div class="step-card" id="step-2">
+                    <div class="step-number">2</div>
+                    <div class="step-visual">
+                        <div class="step-illustration step-illustration-2">
+                            <div class="step-icon-wrapper">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <rect x="6" y="10" width="36" height="28" rx="4" stroke="url(#stepGrad2)" stroke-width="2.5" fill="rgba(0,194,168,0.08)"/>
+                                    <line x1="6" y1="18" x2="42" y2="18" stroke="url(#stepGrad2)" stroke-width="2"/>
+                                    <circle cx="16" cy="26" r="3" fill="#2563EB" opacity="0.6"/>
+                                    <circle cx="24" cy="26" r="3" fill="#00C2A8" opacity="0.6"/>
+                                    <circle cx="32" cy="26" r="3" fill="#25D366" opacity="0.6"/>
+                                    <circle cx="16" cy="34" r="3" fill="#00C2A8" opacity="0.4"/>
+                                    <circle cx="24" cy="34" r="3" fill="#2563EB" opacity="0.4"/>
+                                    <defs><linearGradient id="stepGrad2" x1="0" y1="0" x2="48" y2="48"><stop offset="0%" stop-color="#00C2A8"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="step-title" data-i18n="howItWorks.step2Title">Recibe Reservas</h3>
+                    <p class="step-desc" data-i18n="howItWorks.step2Desc">Tus clientes reservan 24/7 a través de tu link de reservas. Todo se sincroniza automáticamente.</p>
+                </div>
+                <div class="step-connector">
+                    <svg width="60" height="20" viewBox="0 0 60 20"><path d="M0 10h50m0 0l-6-6m6 6l-6 6" stroke="url(#connGrad2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><defs><linearGradient id="connGrad2" x1="0" y1="0" x2="60" y2="0"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#00C2A8"/></linearGradient></defs></svg>
+                </div>
+                <div class="step-card" id="step-3">
+                    <div class="step-number">3</div>
+                    <div class="step-visual">
+                        <div class="step-illustration step-illustration-3">
+                            <div class="step-icon-wrapper">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <path d="M24 4L6 14v20l18 10 18-10V14L24 4z" stroke="url(#stepGrad3)" stroke-width="2.5" fill="rgba(37,211,102,0.08)"/>
+                                    <path d="M17 24l5 5 10-10" stroke="#25D366" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <defs><linearGradient id="stepGrad3" x1="0" y1="0" x2="48" y2="48"><stop offset="0%" stop-color="#25D366"/><stop offset="100%" stop-color="#00C2A8"/></linearGradient></defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="step-title" data-i18n="howItWorks.step3Title">Disfruta los Resultados</h3>
+                    <p class="step-desc" data-i18n="howItWorks.step3Desc">Menos ausencias, más citas, cero estrés. Calendando se encarga del resto mientras tú te enfocas en lo importante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="pricing.tag">Planes</span>
+                <h2 class="section-title" data-i18n="pricing.title">Elige el Plan<br><span class="gradient-text">Perfecto para Ti</span></h2>
+                <p class="section-subtitle" data-i18n="pricing.subtitle">Comienza gratis y escala cuando lo necesites. Sin compromisos.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" id="plan-50">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-plan-name">50 citas</h3>
+                        <p class="pricing-plan-desc">Ideal para empezar</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-amount">12</span>
+                    </div>
+                    <p class="pricing-card-note">Perfecto para negocios pequeños que quieren empezar a automatizar.</p>
+                    <a href="https://app.calendando.com/" class="btn btn-outline btn-pricing">Comienza Gratis</a>
+                </div>
+                <div class="pricing-card pricing-card-featured" id="plan-100">
+                    <div class="pricing-popular-badge">Más Popular</div>
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-plan-name">100 citas</h3>
+                        <p class="pricing-plan-desc">Para crecer con más flujo</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-amount">18</span>
+                    </div>
+                    <p class="pricing-card-note">Incluye automatizaciones y recordatorios para agilizar cada reserva.</p>
+                    <a href="https://app.calendando.com/" class="btn btn-primary btn-pricing">Comienza Gratis</a>
+                </div>
+                <div class="pricing-card" id="plan-200">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-plan-name">200 citas</h3>
+                        <p class="pricing-plan-desc">Para un volumen más alto</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-amount">32</span>
+                    </div>
+                    <p class="pricing-card-note">Ideal si ya manejas varias reservas al día y necesitas más capacidad.</p>
+                    <a href="https://app.calendando.com/" class="btn btn-outline btn-pricing">Comienza Gratis</a>
+                </div>
+                <div class="pricing-card is-hidden" id="plan-300">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-plan-name">300 citas</h3>
+                        <p class="pricing-plan-desc">Para operaciones más activas</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-amount">42</span>
+                    </div>
+                    <p class="pricing-card-note">Ajusta tu flujo de trabajo con más capacidad y menos gestión manual.</p>
+                    <a href="https://app.calendando.com/" class="btn btn-outline btn-pricing">Comienza Gratis</a>
+                </div>
+                <div class="pricing-card is-hidden" id="plan-400">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-plan-name">400 citas</h3>
+                        <p class="pricing-plan-desc">Para volúmenes constantes</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-amount">55</span>
+                    </div>
+                    <p class="pricing-card-note">Escala con más reservas sin perder control de la agenda.</p>
+                    <a href="https://app.calendando.com/" class="btn btn-outline btn-pricing">Comienza Gratis</a>
+                </div>
+                <div class="pricing-card is-hidden" id="plan-500">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-plan-name">500 citas</h3>
+                        <p class="pricing-plan-desc">Para negocio con mucho movimiento</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="pricing-currency">$</span>
+                        <span class="pricing-amount">68</span>
+                    </div>
+                    <p class="pricing-card-note">La opción ideal si tu agenda está en constante crecimiento.</p>
+                    <a href="https://app.calendando.com/" class="btn btn-outline btn-pricing">Comienza Gratis</a>
+                </div>
+            </div>
+            <button type="button" class="pricing-toggle-btn" id="pricing-toggle-btn">¿Tienes más citas?</button>
+        </div>
+    </section>
+
+
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="cta">
+        <div class="cta-bg-shapes">
+            <div class="cta-blob cta-blob-1"></div>
+            <div class="cta-blob cta-blob-2"></div>
+        </div>
+        <div class="container cta-content">
+            <div class="cta-emoji">🚀</div>
+            <h2 class="cta-title" data-i18n="cta.title">¿Listo para Transformar<br>tu Agenda?</h2>
+            <p class="cta-subtitle" data-i18n="cta.subtitle">Únete a cientos de profesionales que ya eliminaron el caos de sus citas con Calendando.</p>
+            <div class="cta-form" id="cta-form">
+                <a href="https://app.calendalo.com" class="btn btn-primary btn-lg cta-submit" data-i18n="cta.button">Prueba Gratis 14 Días</a>
+                <p class="cta-disclaimer" data-i18n="cta.disclaimer">Sin tarjeta de crédito · Cancela cuando quieras · Configuración en 5 minutos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <div class="logo-icon">
+                            <img src="logo.svg" alt="Calendando Logo" width="24" height="24" style="display: block;">
+                        </div>
+                        <span>Calendando</span>
+                    </a>
+                    <p class="footer-brand-desc" data-i18n="footer.desc">Automatiza tu agenda, elimina ausencias y haz crecer tu negocio con el poder de WhatsApp.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/calendando" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="18" cy="6" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4 data-i18n="footer.productTitle">Producto</h4>
+                    <ul>
+                        <li><a href="#features" data-i18n="footer.productL1">Funcionalidades</a></li>
+                        <li><a href="#pricing" data-i18n="footer.productL2">Planes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4 data-i18n="footer.companyTitle">Compañía</h4>
+                    <ul>
+                        <li><a href="contacto.html" data-i18n="footer.companyL4">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4 data-i18n="footer.legalTitle">Legal</h4>
+                    <ul>
+                        <li><a href="privacidad.html" data-i18n="footer.legalL1">Privacidad</a></li>
+                        <li><a href="terminos.html" data-i18n="footer.legalL2">Términos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2026 Calendando. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="wa-fab" id="wa-fab" aria-label="Contactar por WhatsApp" type="button">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M19.1 4.9A9.9 9.9 0 0 0 4.9 19.1L3 21l1.9-1.9a9.9 9.9 0 1 0 14.2-14.2Z" fill="#25D366"/>
+            <path d="M16.9 14.7c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1-.2.2-.6.7-.8.8-.1.2-.3.2-.5.1a7.7 7.7 0 0 1-2.2-1.4 8 8 0 0 1-1.5-1.9c-.1-.2 0-.3.1-.4.1-.1.2-.3.3-.4.1-.1.2-.2.2-.3.1-.1 0-.2 0-.3 0-.1-.2-.5-.4-.8-.2-.3-.4-.3-.5-.3h-.4c-.2 0-.4.1-.6.2-.2.2-.7.7-.7 1.7 0 1 .8 2 1 2.1.2.2 1.8 2.8 4.3 3.9.6.2 1.1.3 1.5.4.6.1 1.1.1 1.5.1.4 0 1.2-.5 1.4-1 .2-.5.2-.9.1-1-.1-.1-.2-.2-.4-.3Z" fill="white"/>
+        </svg>
+    </button>
+
+    <div class="wa-popup" id="wa-popup" aria-hidden="true">
+        <div class="wa-popup-backdrop" id="wa-popup-backdrop"></div>
+        <div class="wa-popup-card" role="dialog" aria-modal="true" aria-labelledby="wa-popup-title">
+            <div class="wa-popup-header">
+                <h3 id="wa-popup-title">¿Quieres hablar con Calendando?</h3>
+                <button class="wa-popup-close" id="wa-popup-close" type="button" aria-label="Cerrar">×</button>
+            </div>
+            <p>Escríbenos por WhatsApp y te responderemos pronto.</p>
+            <a href="https://wa.me/584243145825?text=Hola%20Calendando%2C%20quiero%20conocer%20más%20sobre%20la%20plataforma." class="btn btn-primary">Abrir WhatsApp</a>
+            <a href="mailto:info@calendando.com" class="wa-popup-email">info@calendando.com</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

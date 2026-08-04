@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Calendando</title>
+    <meta name="description" content="Ponte en contacto con Calendando para preguntas, demos o soporte.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="page-shell">
+        <div class="container">
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+            <div class="page-card">
+                <h1 class="page-title">Contacto</h1>
+                <p class="page-intro">¿Tienes preguntas, quieres una demo o necesitas ayuda con Calendando? Estamos aquí para ayudarte.</p>
+
+                <section class="page-section">
+                    <h2>Escríbenos</h2>
+                    <p>Envíanos un correo a <a href="mailto:info@calendando.com">info@calendando.com</a> y nos pondremos en contacto contigo lo antes posible.</p>
+                </section>
+
+                <section class="page-section">
+                    <h2>Soporte y WhatsApp</h2>
+                    <p>También puedes escribirnos directamente por WhatsApp o usar el botón flotante de la esquina para iniciar una conversación.</p>
+                    <a href="https://wa.me/584243145825?text=Hola%20Calendando%2C%20quiero%20contactar%20con%20ustedes." class="btn btn-primary" style="margin-top: 1rem;">Contactar por WhatsApp</a>
+                </section>
+
+                <section class="page-section">
+                    <h2>Próximamente</h2>
+                    <p>También podrás hablar con nosotros por WhatsApp o completar un formulario directo desde esta página.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <button class="wa-fab" id="wa-fab" aria-label="Contactar por WhatsApp" type="button">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M19.1 4.9A9.9 9.9 0 0 0 4.9 19.1L3 21l1.9-1.9a9.9 9.9 0 1 0 14.2-14.2Z" fill="#25D366"/>
+            <path d="M16.9 14.7c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1-.2.2-.6.7-.8.8-.1.2-.3.2-.5.1a7.7 7.7 0 0 1-2.2-1.4 8 8 0 0 1-1.5-1.9c-.1-.2 0-.3.1-.4.1-.1.2-.3.3-.4.1-.1.2-.2.2-.3.1-.1 0-.2 0-.3 0-.1-.2-.5-.4-.8-.2-.3-.4-.3-.5-.3h-.4c-.2 0-.4.1-.6.2-.2.2-.7.7-.7 1.7 0 1 .8 2 1 2.1.2.2 1.8 2.8 4.3 3.9.6.2 1.1.3 1.5.4.6.1 1.1.1 1.5.1.4 0 1.2-.5 1.4-1 .2-.5.2-.9.1-1-.1-.1-.2-.2-.4-.3Z" fill="white"/>
+        </svg>
+    </button>
+
+    <div class="wa-popup" id="wa-popup" aria-hidden="true">
+        <div class="wa-popup-backdrop" id="wa-popup-backdrop"></div>
+        <div class="wa-popup-card" role="dialog" aria-modal="true" aria-labelledby="wa-popup-title">
+            <div class="wa-popup-header">
+                <h3 id="wa-popup-title">¿Quieres hablar con Calendando?</h3>
+                <button class="wa-popup-close" id="wa-popup-close" type="button" aria-label="Cerrar">×</button>
+            </div>
+            <p>Escríbenos por WhatsApp y te responderemos pronto.</p>
+            <a href="https://wa.me/584243145825?text=Hola%20Calendando%2C%20quiero%20contactar%20con%20ustedes." class="btn btn-primary">Abrir WhatsApp</a>
+            <a href="mailto:info@calendando.com" class="wa-popup-email">info@calendando.com</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
