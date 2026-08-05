@@ -393,37 +393,37 @@ function animatePrice(element, from, to) {
 // ===========================
 // SCROLL REVEAL ANIMATIONS
 // ===========================
-function initWhatsAppPopup() {
-    const fab = document.getElementById('wa-fab');
-    const popup = document.getElementById('wa-popup');
-    const closeBtn = document.getElementById('wa-popup-close');
-    const backdrop = document.getElementById('wa-popup-backdrop');
+// function initWhatsAppPopup() {
+//     const fab = document.getElementById('wa-fab');
+//     const popup = document.getElementById('wa-popup');
+//     const closeBtn = document.getElementById('wa-popup-close');
+//     const backdrop = document.getElementById('wa-popup-backdrop');
 
-    if (!fab || !popup) {
-        return;
-    }
+//     if (!fab || !popup) {
+//         return;
+//     }
 
-    const openPopup = () => {
-        popup.classList.add('active');
-        popup.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('wa-modal-open');
-    };
+//     const openPopup = () => {
+//         popup.classList.add('active');
+//         popup.setAttribute('aria-hidden', 'false');
+//         document.body.classList.add('wa-modal-open');
+//     };
 
-    const closePopup = () => {
-        popup.classList.remove('active');
-        popup.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('wa-modal-open');
-    };
+//     const closePopup = () => {
+//         popup.classList.remove('active');
+//         popup.setAttribute('aria-hidden', 'true');
+//         document.body.classList.remove('wa-modal-open');
+//     };
 
-    fab.addEventListener('click', openPopup);
-    closeBtn?.addEventListener('click', closePopup);
-    backdrop?.addEventListener('click', closePopup);
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-            closePopup();
-        }
-    });
-}
+//     fab.addEventListener('click', openPopup);
+//     closeBtn?.addEventListener('click', closePopup);
+//     backdrop?.addEventListener('click', closePopup);
+//     document.addEventListener('keydown', (event) => {
+//         if (event.key === 'Escape') {
+//             closePopup();
+//         }
+//     });
+// }
 
 function initScrollReveal() {
     const revealElements = document.querySelectorAll(
@@ -543,8 +543,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Pricing toggle
     initPricingToggle();
 
-    // WhatsApp popup
-    initWhatsAppPopup();
 
     // Scroll reveal
     initScrollReveal();

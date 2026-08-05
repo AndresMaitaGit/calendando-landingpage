@@ -1,16 +1,20 @@
-# Landing page estático servido con nginx
-FROM nginx:alpine
+# Usa una versión oficial y ligera de Node.js
+FROM node:20-alpine
 
-# Copia los archivos del sitio (html, js, uploads, etc.)
-COPY . /usr/share/nginx/html/
+# Establece el directorio de trabajo dentro del contenedor
+WORKDIR /app
 
-# El archivo principal tiene un nombre no estándar (.dc.html con espacios),
-# lo copiamos como index.html para que nginx lo sirva por defecto.
-RUN cp "/usr/share/nginx/html/Calendando Landing.dc.html" /usr/share/nginx/html/index.html
+# Copia package.json y package-lock.json para aprovechar el caché de capas de Docker
+COPY package*.json ./
 
-# Config de nginx para escuchar en el puerto 3005
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Instala solo las dependencias de producción
+RUN npm ci --only=production
 
-EXPOSE 3005
+# Copia el resto del código del proyecto (carpeta public/, src/, server.js, etc.)
+COPY . .
 
-CMD ["nginx", "-g", "daemon off;"]
+# Expone el puerto 3000 interno que usa tu server.js
+EXPOSE 3000
+
+# Comando para iniciar la aplicación
+CMD ["node", "server.js"]
