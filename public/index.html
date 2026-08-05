@@ -20,6 +20,25 @@
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2273324386802708');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=2273324386802708&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 
 <body>
@@ -28,7 +47,8 @@
         <div class="nav-container">
             <a href="#" class="nav-logo" id="nav-logo">
                 <div class="logo-icon">
-                    <img src="assets/images/logo.svg" alt="Calendando Logo" width="28" height="28" style="display: block;">
+                    <img src="assets/images/logo.svg" alt="Calendando Logo" width="28" height="28"
+                        style="display: block;">
                 </div>
                 <span class="logo-text">Calendando</span>
             </a>
@@ -119,7 +139,8 @@
                             <div class="wa-chat">
                                 <div class="wa-message wa-incoming wa-animate-1">
                                     <p>¡Hola María! 👋 Tu cita con <strong>Dra. García</strong> es mañana a las
-                                        <strong>10:00 AM</strong>.</p>
+                                        <strong>10:00 AM</strong>.
+                                    </p>
                                     <span class="wa-time">9:00 AM</span>
                                 </div>
                                 <div class="wa-message wa-incoming wa-animate-2">
@@ -180,7 +201,8 @@
             <div class="social-proof-header">
                 <span class="social-proof-check">✓</span>
                 <p class="social-proof-title" data-i18n="social.title">Cualquier negocio puede usar
-                    <strong>Calendando</strong></p>
+                    <strong>Calendando</strong>
+                </p>
             </div>
             <p class="social-proof-subtitle" data-i18n="social.subtitle">Desde clínicas y salones de belleza hasta
                 consultorios y centros de bienestar, Calendando se adapta a tu industria.</p>
@@ -598,7 +620,8 @@
                 <div class="footer-brand">
                     <a href="#" class="footer-logo">
                         <div class="logo-icon">
-                            <img src="assets/images/logo.svg" alt="Calendando Logo" width="24" height="24" style="display: block;">
+                            <img src="assets/images/logo.svg" alt="Calendando Logo" width="24" height="24"
+                                style="display: block;">
                         </div>
                         <span>Calendando</span>
                     </a>
@@ -653,20 +676,16 @@
     </footer>
 
     <a href="https://wa.me/584243145815?text=Hola%20Calendando%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20la%20plataforma."
-   class="wa-fab"
-   id="wa-fab"
-   aria-label="Contactar por WhatsApp"
-   target="_blank"
-   rel="noopener noreferrer">
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <path
-            d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.44 1.64 6.32L3 29l6.88-1.6A12.94 12.94 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z"
-            fill="#25D366" />
-        <path
-            d="M22.5 19.14c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.95-1.79-2.12-2-2.48-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.61-.81-.62h-.69c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3s1.29 3.48 1.47 3.72c.18.24 2.54 3.87 6.15 5.43.86.37 1.53.59 2.05.76.86.27 1.65.23 2.27.14.69-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z"
-            fill="white" />
-    </svg>
-</a>
+        class="wa-fab" id="wa-fab" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener noreferrer">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path
+                d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.44 1.64 6.32L3 29l6.88-1.6A12.94 12.94 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z"
+                fill="#25D366" />
+            <path
+                d="M22.5 19.14c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.95-1.79-2.12-2-2.48-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.61-.81-.62h-.69c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3s1.29 3.48 1.47 3.72c.18.24 2.54 3.87 6.15 5.43.86.37 1.53.59 2.05.76.86.27 1.65.23 2.27.14.69-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z"
+                fill="white" />
+        </svg>
+    </a>
 
     <!-- <div class="wa-popup" id="wa-popup" aria-hidden="true">
         <div class="wa-popup-backdrop" id="wa-popup-backdrop"></div>
