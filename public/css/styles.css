@@ -2201,3 +2201,17 @@ body.wa-modal-open {
 .legal-contact-box a:hover {
     text-decoration: underline;
 }
+
+.btn-login {
+    background: transparent;
+    color: var(--text-color, #334155);
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.btn-login:hover {
+    color: #0284c7;
+}

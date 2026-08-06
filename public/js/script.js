@@ -8,6 +8,7 @@ const translations = {
         'nav.howItWorks': 'Cómo Funciona',
         'nav.pricing': 'Planes',
         'nav.testimonials': 'Testimonios',
+        'nav.login': 'Iniciar Sesión',
         'nav.cta': 'Prueba Gratis',
 
         // Hero
@@ -61,7 +62,7 @@ const translations = {
         'howItWorks.step1Title': 'Configura tu Perfil',
         'howItWorks.step1Desc': 'Agrega tus servicios, horarios y profesionales, y usa nuestro número de WhatsApp para enviar todas las notificaciones.',
         'howItWorks.step2Title': 'Recibe Reservas',
-        'howItWorks.step2Desc': 'Tus clientes agendan 24/7 por WhatsApp o tu link de reservas. Todo se sincroniza automáticamente.',
+        'howItWorks.step2Desc': 'Tus clientes agendan 24/7 por tu link de reservas. Todo se sincroniza automáticamente.',
         'howItWorks.step3Title': 'Disfruta los Resultados',
         'howItWorks.step3Desc': 'Menos ausencias, más citas, cero estrés. Calendando se encarga del resto mientras tú te enfocas en lo importante.',
 
@@ -141,6 +142,7 @@ const translations = {
         'nav.howItWorks': 'How It Works',
         'nav.pricing': 'Pricing',
         'nav.testimonials': 'Testimonials',
+        'nav.login': 'Log In',
         'nav.cta': 'Try Free',
 
         // Hero
