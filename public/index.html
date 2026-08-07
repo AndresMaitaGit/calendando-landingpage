@@ -4,30 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendando — Agenda Inteligente por WhatsApp</title>
-    <meta name="description"
-        content="Calendando: plataforma de agendamiento inteligente por WhatsApp. Elimina citas dobles, reduce ausencias y ahorra horas de trabajo administrativo.">
-    <meta name="keywords" content="agendamiento, citas, WhatsApp, automatización, clínicas, salones, profesionales">
+
+    <!-- SEO Principal -->
+    <title>Calendando | Agendamiento de Citas Automatizado por WhatsApp</title>
+    <meta name="description" content="Automatiza tus citas y elimina las ausencias de clientes. Software de agendamiento con recordatorios e integraciones automáticas por WhatsApp para negocios. Prueba gratis sin tarjeta.">
+    <meta name="keywords" content="agendar citas whatsapp, software de citas, recordatorios whatsapp automatizados, sistema de reservas online, gestion de agenda negocios, agendamiento dental barberia">
     <meta name="author" content="Calendando">
-    <meta property="og:title" content="Calendando — Agenda Inteligente por WhatsApp">
-    <meta property="og:description"
-        content="Automatiza tus citas, recordatorios y confirmaciones directamente por WhatsApp.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://calendando.com/">
+
+    <!-- Open Graph / Facebook / Meta Ads / WhatsApp Share -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calendando.com/">
+    <meta property="og:title" content="Calendando | Automatiza tus Citas por WhatsApp">
+    <meta property="og:description" content="Elimina las ausencias de tus clientes. Permite que reserven 24/7 y reciban recordatorios automáticos por WhatsApp.">
+    <meta property="og:image" content="https://calendando.com/assets/images/og-cover.png">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://calendando.com/">
+    <meta name="twitter:title" content="Calendando | Agendamiento por WhatsApp">
+    <meta name="twitter:description" content="Software de reservas y confirmaciones automáticas por WhatsApp para profesionales y negocios.">
+    <meta name="twitter:image" content="https://calendando.com/assets/images/og-cover.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+    <!-- Fuentes y CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo.png">
-    <link rel="apple-touch-icon" href="/assets/images/logo.png">
-
-    <meta property="og:image" content="https://calendando.com/assets/images/og-cover.png">
-    <meta property="og:url" content="https://calendando.com/">
-    <link rel="canonical" href="https://calendando.com/">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
+
     <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
@@ -44,23 +55,60 @@
         fbq('init', '2273324386802708');
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=2273324386802708&ev=PageView&noscript=1" /></noscript>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2273324386802708&ev=PageView&noscript=1" />
+    </noscript>
     <!-- End Meta Pixel Code -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const currentParams = window.location.search;
 
-            if (currentParams) {
-                // Selecciona los enlaces que van a app.calendando.com EXCLUYENDO el de Iniciar Sesión (.btn-login)
-                const registerLinks = document.querySelectorAll('a[href*="app.calendando.com"]:not(.btn-login)');
+    <!-- GEO / Schema.org Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Calendando",
+      "operatingSystem": "Web, iOS, Android",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Prueba gratuita de agendamiento sin tarjeta de crédito"
+      },
+      "description": "Calendando es un software de gestión de agenda y citas que envía recordatorios y confirmaciones automáticas por WhatsApp para reducir ausencias en negocios y consultorios.",
+      "featureList": [
+        "Confirmación de citas por WhatsApp",
+        "Sincronización bidireccional con Google Calendar",
+        "Página de reservas personalizada 24/7",
+        "Recordatorios automáticos anti-ausentismo"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Calendando",
+        "url": "https://calendando.com"
+      }
+    }
+    </script>
 
-                registerLinks.forEach(link => {
-                    const separator = link.href.includes('?') ? '&' : '?';
-                    link.href = link.href + separator + currentParams.substring(1);
-                });
-            }
-        });
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "¿Cómo funciona el envío de recordatorios por WhatsApp con Calendando?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Calendando se conecta a tu agenda y envía un mensaje automático por WhatsApp al cliente horas antes de su cita para que confirme o reprograme con un solo toque."
+        }
+      }, {
+        "@type": "Question",
+        "name": "¿Se necesita tarjeta de crédito para probar Calendando?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, puedes crear tu cuenta y usar la plataforma gratis sin ingresar datos bancarios ni tarjetas de crédito."
+        }
+      }]
+    }
     </script>
 </head>
 
@@ -70,8 +118,7 @@
         <div class="nav-container">
             <a href="#" class="nav-logo" id="nav-logo">
                 <div class="logo-icon">
-                    <img src="assets/images/logo.svg" alt="Calendando Logo" width="28" height="28"
-                        style="display: block;">
+                    <img src="assets/images/logo.svg" alt="Calendando Logo" width="28" height="28" style="display: block;">
                 </div>
                 <span class="logo-text">Calendando</span>
             </a>
@@ -87,9 +134,7 @@
                     <span class="lang-inactive" id="lang-alt-label">EN</span>
                 </button>
                 <a href="https://app.calendando.com" class="btn btn-login" data-i18n="nav.login">Iniciar Sesión</a>
-
                 <a href="https://app.calendando.com/" class="btn btn-nav" data-i18n="nav.cta">Prueba Gratis</a>
-
                 <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
                     <span></span>
                     <span></span>
@@ -114,15 +159,13 @@
                     <span class="gradient-text">Olvídate del Caos</span>
                 </h1>
                 <p class="hero-subtitle" data-i18n="hero.subtitle">
-                    Calendando elimina las citas dobles, reduce las ausencias y ahorra horas de trabajo administrativo
-                    automatizando reservas, recordatorios y confirmaciones directamente por WhatsApp.
+                    Calendando elimina las citas dobles, reduce las ausencias y ahorra horas de trabajo administrativo automatizando reservas, recordatorios y confirmaciones directamente por WhatsApp.
                 </p>
                 <div class="hero-cta-group">
                     <a href="https://app.calendando.com/" class="btn btn-primary btn-lg" data-i18n="hero.ctaPrimary">
                         Comienza Gratis
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
                     <a href="#how-it-works" class="btn btn-outline btn-lg" data-i18n="hero.ctaSecondary">
@@ -132,7 +175,7 @@
                         Ver Cómo Funciona
                     </a>
                 </div>
-                
+
                 <div class="hero-stats">
                     <div class="hero-stat">
                         <span class="hero-stat-number">95%</span>
@@ -170,9 +213,7 @@
                             </div>
                             <div class="wa-chat">
                                 <div class="wa-message wa-incoming wa-animate-1">
-                                    <p>¡Hola María! 👋 Tu cita con <strong>Dra. García</strong> es mañana a las
-                                        <strong>10:00 AM</strong>.
-                                    </p>
+                                    <p>¡Hola María! 👋 Tu cita con <strong>Dra. García</strong> es mañana a las <strong>10:00 AM</strong>.</p>
                                     <span class="wa-time">9:00 AM</span>
                                 </div>
                                 <div class="wa-message wa-incoming wa-animate-2">
@@ -185,13 +226,7 @@
                                 </div>
                                 <div class="wa-message wa-outgoing wa-animate-3">
                                     <p>✅ Confirmar</p>
-                                    <span class="wa-time">9:02 AM <svg width="15" height="11" viewBox="0 0 16 11"
-                                            fill="none" style="margin-left:2px;vertical-align:middle">
-                                            <path d="M11.5 2.5L7 7L5.5 5.5" stroke="#53BDEB" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M15.5 2.5L11 7L9.5 5.5" stroke="#53BDEB" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg></span>
+                                    <span class="wa-time">9:02 AM <svg width="15" height="11" viewBox="0 0 16 11" fill="none" style="margin-left:2px;vertical-align:middle"><path d="M11.5 2.5L7 7L5.5 5.5" stroke="#53BDEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /><path d="M15.5 2.5L11 7L9.5 5.5" stroke="#53BDEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
                                 </div>
                                 <div class="wa-message wa-incoming wa-animate-4">
                                     <p>¡Perfecto! Tu cita está confirmada. 🎉 Te esperamos mañana.</p>
@@ -227,84 +262,33 @@
         </div>
     </section>
 
-    <!-- Social Proof / Trusted By -->
+    <!-- Social Proof -->
     <section class="social-proof" id="social-proof">
         <div class="container">
             <div class="social-proof-header">
                 <span class="social-proof-check">✓</span>
-                <p class="social-proof-title" data-i18n="social.title">Cualquier negocio puede usar
-                    <strong>Calendando</strong>
-                </p>
+                <p class="social-proof-title" data-i18n="social.title">Cualquier negocio puede usar <strong>Calendando</strong></p>
             </div>
-            <p class="social-proof-subtitle" data-i18n="social.subtitle">Desde clínicas y salones de belleza hasta
-                consultorios y centros de bienestar, Calendando se adapta a tu industria.</p>
+            <p class="social-proof-subtitle" data-i18n="social.subtitle">Desde clínicas y salones de belleza hasta consultorios y centros de bienestar, Calendando se adapta a tu industria.</p>
             <div class="industry-carousel">
                 <div class="industry-track">
-                    <div class="industry-item">
-                        <div class="industry-icon">🏥</div>
-                        <span data-i18n="social.industry1">Clínicas</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">💇</div>
-                        <span data-i18n="social.industry2">Salones de Belleza</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">🦷</div>
-                        <span data-i18n="social.industry3">Consultorios Dentales</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">🧘</div>
-                        <span data-i18n="social.industry4">Centros de Bienestar</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">🏋️</div>
-                        <span data-i18n="social.industry5">Gimnasios</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">🐾</div>
-                        <span data-i18n="social.industry6">Veterinarias</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">⚖️</div>
-                        <span data-i18n="social.industry7">Abogados</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">📚</div>
-                        <span data-i18n="social.industry8">Tutores</span>
-                    </div>
+                    <div class="industry-item"><div class="industry-icon">🏥</div><span data-i18n="social.industry1">Clínicas</span></div>
+                    <div class="industry-item"><div class="industry-icon">💇</div><span data-i18n="social.industry2">Salones de Belleza</span></div>
+                    <div class="industry-item"><div class="industry-icon">🦷</div><span data-i18n="social.industry3">Consultorios Dentales</span></div>
+                    <div class="industry-item"><div class="industry-icon">🧘</div><span data-i18n="social.industry4">Centros de Bienestar</span></div>
+                    <div class="industry-item"><div class="industry-icon">🏋️</div><span data-i18n="social.industry5">Gimnasios</span></div>
+                    <div class="industry-item"><div class="industry-icon">🐾</div><span data-i18n="social.industry6">Veterinarias</span></div>
+                    <div class="industry-item"><div class="industry-icon">⚖️</div><span data-i18n="social.industry7">Abogados</span></div>
+                    <div class="industry-item"><div class="industry-icon">📚</div><span data-i18n="social.industry8">Tutores</span></div>
                     <!-- Duplicated for seamless scroll -->
-                    <div class="industry-item">
-                        <div class="industry-icon">🏥</div>
-                        <span data-i18n="social.industry1">Clínicas</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">💇</div>
-                        <span data-i18n="social.industry2">Salones de Belleza</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">🦷</div>
-                        <span data-i18n="social.industry3">Consultorios Dentales</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">🧘</div>
-                        <span data-i18n="social.industry4">Centros de Bienestar</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">🏋️</div>
-                        <span data-i18n="social.industry5">Gimnasios</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">🐾</div>
-                        <span data-i18n="social.industry6">Veterinarias</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">⚖️</div>
-                        <span data-i18n="social.industry7">Abogados</span>
-                    </div>
-                    <div class="industry-item">
-                        <div class="industry-icon">📚</div>
-                        <span data-i18n="social.industry8">Tutores</span>
-                    </div>
+                    <div class="industry-item"><div class="industry-icon">🏥</div><span data-i18n="social.industry1">Clínicas</span></div>
+                    <div class="industry-item"><div class="industry-icon">💇</div><span data-i18n="social.industry2">Salones de Belleza</span></div>
+                    <div class="industry-item"><div class="industry-icon">🦷</div><span data-i18n="social.industry3">Consultorios Dentales</span></div>
+                    <div class="industry-item"><div class="industry-icon">🧘</div><span data-i18n="social.industry4">Centros de Bienestar</span></div>
+                    <div class="industry-item"><div class="industry-icon">🏋️</div><span data-i18n="social.industry5">Gimnasios</span></div>
+                    <div class="industry-item"><div class="industry-icon">🐾</div><span data-i18n="social.industry6">Veterinarias</span></div>
+                    <div class="industry-item"><div class="industry-icon">⚖️</div><span data-i18n="social.industry7">Abogados</span></div>
+                    <div class="industry-item"><div class="industry-icon">📚</div><span data-i18n="social.industry8">Tutores</span></div>
                 </div>
             </div>
         </div>
@@ -315,26 +299,16 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag" data-i18n="features.tag">Funcionalidades</span>
-                <h2 class="section-title" data-i18n="features.title">Todo lo que Necesitas<br><span
-                        class="gradient-text">en Una Sola Plataforma</span></h2>
-                <p class="section-subtitle" data-i18n="features.subtitle">Herramientas poderosas diseñadas para
-                    simplificar tu día a día y hacer crecer tu negocio.</p>
+                <h2 class="section-title" data-i18n="features.title">Todo lo que Necesitas<br><span class="gradient-text">en Una Sola Plataforma</span></h2>
+                <p class="section-subtitle" data-i18n="features.subtitle">Herramientas poderosas diseñadas para simplificar tu día a día y hacer crecer tu negocio.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card feature-card-large" id="feature-whatsapp">
                     <div class="feature-card-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path
-                                d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.44 1.64 6.32L3 29l6.88-1.6A12.94 12.94 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z"
-                                fill="#25D366" />
-                            <path
-                                d="M22.5 19.14c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.95-1.79-2.12-2-2.48-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.61-.81-.62h-.69c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3s1.29 3.48 1.47 3.72c.18.24 2.54 3.87 6.15 5.43.86.37 1.53.59 2.05.76.86.27 1.65.23 2.27.14.69-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z"
-                                fill="white" />
-                        </svg>
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.44 1.64 6.32L3 29l6.88-1.6A12.94 12.94 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z" fill="#25D366" /><path d="M22.5 19.14c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.95-1.79-2.12-2-2.48-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.61-.81-.62h-.69c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3s1.29 3.48 1.47 3.72c.18.24 2.54 3.87 6.15 5.43.86.37 1.53.59 2.05.76.86.27 1.65.23 2.27.14.69-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z" fill="white" /></svg>
                     </div>
                     <h3 class="feature-card-title" data-i18n="features.f1Title">Automatización por WhatsApp</h3>
-                    <p class="feature-card-desc" data-i18n="features.f1Desc">Envía confirmaciones, recordatorios y
-                        seguimientos automáticos por el canal que tus clientes ya usan. Sin apps adicionales.</p>
+                    <p class="feature-card-desc" data-i18n="features.f1Desc">Envía confirmaciones, recordatorios y seguimientos automáticos por el canal que tus clientes ya usan. Sin apps adicionales.</p>
                     <div class="feature-card-visual">
                         <div class="mini-chat">
                             <div class="mini-msg mini-incoming">📅 Recordatorio: Cita mañana 3:00 PM</div>
@@ -345,71 +319,38 @@
                 </div>
                 <div class="feature-card" id="feature-calendar">
                     <div class="feature-card-icon feature-icon-purple">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                            <rect x="3" y="5" width="22" height="20" rx="3" stroke="currentColor" stroke-width="2" />
-                            <line x1="3" y1="11" x2="25" y2="11" stroke="currentColor" stroke-width="2" />
-                            <line x1="9" y1="3" x2="9" y2="7" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" />
-                            <line x1="19" y1="3" x2="19" y2="7" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" />
-                            <circle cx="10" cy="17" r="2" fill="currentColor" />
-                            <circle cx="18" cy="17" r="2" fill="currentColor" />
-                        </svg>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="5" width="22" height="20" rx="3" stroke="currentColor" stroke-width="2" /><line x1="3" y1="11" x2="25" y2="11" stroke="currentColor" stroke-width="2" /><line x1="9" y1="3" x2="9" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" /><line x1="19" y1="3" x2="19" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" /><circle cx="10" cy="17" r="2" fill="currentColor" /><circle cx="18" cy="17" r="2" fill="currentColor" /></svg>
                     </div>
                     <h3 class="feature-card-title" data-i18n="features.f2Title">Calendario Inteligente</h3>
-                    <p class="feature-card-desc" data-i18n="features.f2Desc">Vista clara de todas tus citas.
-                        Sincronización con Google Calendar. Cero citas dobles, siempre.</p>
+                    <p class="feature-card-desc" data-i18n="features.f2Desc">Vista clara de todas tus citas. Sincronización con Google Calendar. Cero citas dobles, siempre.</p>
                 </div>
                 <div class="feature-card" id="feature-noshow">
                     <div class="feature-card-icon feature-icon-teal">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                            <circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="2" />
-                            <path d="M9 14l3 3 7-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="2" /><path d="M9 14l3 3 7-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
                     </div>
                     <h3 class="feature-card-title" data-i18n="features.f3Title">Cero Ausencias</h3>
-                    <p class="feature-card-desc" data-i18n="features.f3Desc">Recordatorios automáticos y confirmaciones
-                        que reducen las ausencias hasta en un 95%.</p>
+                    <p class="feature-card-desc" data-i18n="features.f3Desc">Recordatorios automáticos y confirmaciones que reducen las ausencias hasta en un 95%.</p>
                 </div>
                 <div class="feature-card" id="feature-booking">
                     <div class="feature-card-icon feature-icon-orange">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                            <rect x="4" y="6" width="20" height="16" rx="3" stroke="currentColor" stroke-width="2" />
-                            <path d="M4 12h20" stroke="currentColor" stroke-width="2" />
-                            <circle cx="10" cy="18" r="1.5" fill="currentColor" />
-                            <circle cx="14" cy="18" r="1.5" fill="currentColor" />
-                            <circle cx="18" cy="18" r="1.5" fill="currentColor" />
-                        </svg>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="6" width="20" height="16" rx="3" stroke="currentColor" stroke-width="2" /><path d="M4 12h20" stroke="currentColor" stroke-width="2" /><circle cx="10" cy="18" r="1.5" fill="currentColor" /><circle cx="14" cy="18" r="1.5" fill="currentColor" /><circle cx="18" cy="18" r="1.5" fill="currentColor" /></svg>
                     </div>
                     <h3 class="feature-card-title" data-i18n="features.f4Title">Reservas 24/7</h3>
-                    <p class="feature-card-desc" data-i18n="features.f4Desc">Tus clientes pueden agendar en cualquier
-                        momento, incluso fuera de horario. La agenda nunca para.</p>
+                    <p class="feature-card-desc" data-i18n="features.f4Desc">Tus clientes pueden agendar en cualquier momento, incluso fuera de horario. La agenda nunca para.</p>
                 </div>
                 <div class="feature-card" id="feature-analytics">
                     <div class="feature-card-icon feature-icon-pink">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                            <rect x="4" y="18" width="4" height="6" rx="1" fill="currentColor" />
-                            <rect x="10" y="12" width="4" height="12" rx="1" fill="currentColor" opacity="0.7" />
-                            <rect x="16" y="8" width="4" height="16" rx="1" fill="currentColor" opacity="0.5" />
-                            <rect x="22" y="4" width="4" height="20" rx="1" fill="currentColor" opacity="0.3" />
-                        </svg>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="18" width="4" height="6" rx="1" fill="currentColor" /><rect x="10" y="12" width="4" height="12" rx="1" fill="currentColor" opacity="0.7" /><rect x="16" y="8" width="4" height="16" rx="1" fill="currentColor" opacity="0.5" /><rect x="22" y="4" width="4" height="20" rx="1" fill="currentColor" opacity="0.3" /></svg>
                     </div>
                     <h3 class="feature-card-title" data-i18n="features.f5Title">Reportes y Analíticas</h3>
-                    <p class="feature-card-desc" data-i18n="features.f5Desc">Visualiza métricas clave: tasas de
-                        asistencia, horarios más demandados y rendimiento de tu equipo.</p>
+                    <p class="feature-card-desc" data-i18n="features.f5Desc">Visualiza métricas clave: tasas de asistencia, horarios más demandados y rendimiento de tu equipo.</p>
                 </div>
                 <div class="feature-card" id="feature-multi">
                     <div class="feature-card-icon feature-icon-blue">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                            <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2" />
-                            <circle cx="20" cy="10" r="4" stroke="currentColor" stroke-width="2" />
-                            <circle cx="14" cy="20" r="4" stroke="currentColor" stroke-width="2" />
-                        </svg>
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2" /><circle cx="20" cy="10" r="4" stroke="currentColor" stroke-width="2" /><circle cx="14" cy="20" r="4" stroke="currentColor" stroke-width="2" /></svg>
                     </div>
                     <h3 class="feature-card-title" data-i18n="features.f6Title">Multi-Profesional</h3>
-                    <p class="feature-card-desc" data-i18n="features.f6Desc">Gestiona múltiples profesionales, horarios
-                        y sucursales desde una sola cuenta. Perfecto para equipos.</p>
+                    <p class="feature-card-desc" data-i18n="features.f6Desc">Gestiona múltiples profesionales, horarios y sucursales desde una sola cuenta. Perfecto para equipos.</p>
                 </div>
             </div>
         </div>
@@ -420,10 +361,8 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag" data-i18n="howItWorks.tag">Cómo Funciona</span>
-                <h2 class="section-title" data-i18n="howItWorks.title">Tres Pasos para<br><span
-                        class="gradient-text">Olvidarte del Caos</span></h2>
-                <p class="section-subtitle" data-i18n="howItWorks.subtitle">Configura tu cuenta en minutos y empieza a
-                    recibir citas automáticamente.</p>
+                <h2 class="section-title" data-i18n="howItWorks.title">Tres Pasos para<br><span class="gradient-text">Olvidarte del Caos</span></h2>
+                <p class="section-subtitle" data-i18n="howItWorks.subtitle">Configura tu cuenta en minutos y empieza a recibir citas automáticamente.</p>
             </div>
             <div class="steps-container">
                 <div class="step-card" id="step-1">
@@ -431,172 +370,92 @@
                     <div class="step-visual">
                         <div class="step-illustration step-illustration-1">
                             <div class="step-icon-wrapper">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                    <rect x="8" y="6" width="32" height="36" rx="4" stroke="url(#stepGrad1)"
-                                        stroke-width="2.5" fill="rgba(37,99,235,0.08)" />
-                                    <circle cx="24" cy="22" r="6" stroke="url(#stepGrad1)" stroke-width="2" />
-                                    <path d="M14 36c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="url(#stepGrad1)"
-                                        stroke-width="2" stroke-linecap="round" />
-                                    <defs>
-                                        <linearGradient id="stepGrad1" x1="0" y1="0" x2="48" y2="48">
-                                            <stop offset="0%" stop-color="#2563EB" />
-                                            <stop offset="100%" stop-color="#00C2A8" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="6" width="32" height="36" rx="4" stroke="url(#stepGrad1)" stroke-width="2.5" fill="rgba(37,99,235,0.08)" /><circle cx="24" cy="22" r="6" stroke="url(#stepGrad1)" stroke-width="2" /><path d="M14 36c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="url(#stepGrad1)" stroke-width="2" stroke-linecap="round" /><defs><linearGradient id="stepGrad1" x1="0" y1="0" x2="48" y2="48"><stop offset="0%" stop-color="#2563EB" /><stop offset="100%" stop-color="#00C2A8" /></linearGradient></defs></svg>
                             </div>
                         </div>
                     </div>
                     <h3 class="step-title" data-i18n="howItWorks.step1Title">Configura tu Perfil</h3>
-                    <p class="step-desc" data-i18n="howItWorks.step1Desc">Agrega tus servicios, horarios y
-                        profesionales, y usa nuestro número de WhatsApp para enviar todas las notificaciones.</p>
+                    <p class="step-desc" data-i18n="howItWorks.step1Desc">Agrega tus servicios, horarios y profesionales, y usa nuestro número de WhatsApp para enviar todas las notificaciones.</p>
                 </div>
                 <div class="step-connector">
-                    <svg width="60" height="20" viewBox="0 0 60 20">
-                        <path d="M0 10h50m0 0l-6-6m6 6l-6 6" stroke="url(#connGrad)" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                        <defs>
-                            <linearGradient id="connGrad" x1="0" y1="0" x2="60" y2="0">
-                                <stop offset="0%" stop-color="#2563EB" />
-                                <stop offset="100%" stop-color="#00C2A8" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                    <svg width="60" height="20" viewBox="0 0 60 20"><path d="M0 10h50m0 0l-6-6m6 6l-6 6" stroke="url(#connGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" /><defs><linearGradient id="connGrad" x1="0" y1="0" x2="60" y2="0"><stop offset="0%" stop-color="#2563EB" /><stop offset="100%" stop-color="#00C2A8" /></linearGradient></defs></svg>
                 </div>
                 <div class="step-card" id="step-2">
                     <div class="step-number">2</div>
                     <div class="step-visual">
                         <div class="step-illustration step-illustration-2">
                             <div class="step-icon-wrapper">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                    <rect x="6" y="10" width="36" height="28" rx="4" stroke="url(#stepGrad2)"
-                                        stroke-width="2.5" fill="rgba(0,194,168,0.08)" />
-                                    <line x1="6" y1="18" x2="42" y2="18" stroke="url(#stepGrad2)" stroke-width="2" />
-                                    <circle cx="16" cy="26" r="3" fill="#2563EB" opacity="0.6" />
-                                    <circle cx="24" cy="26" r="3" fill="#00C2A8" opacity="0.6" />
-                                    <circle cx="32" cy="26" r="3" fill="#25D366" opacity="0.6" />
-                                    <circle cx="16" cy="34" r="3" fill="#00C2A8" opacity="0.4" />
-                                    <circle cx="24" cy="34" r="3" fill="#2563EB" opacity="0.4" />
-                                    <defs>
-                                        <linearGradient id="stepGrad2" x1="0" y1="0" x2="48" y2="48">
-                                            <stop offset="0%" stop-color="#00C2A8" />
-                                            <stop offset="100%" stop-color="#2563EB" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="url(#stepGrad2)" stroke-width="2.5" fill="rgba(0,194,168,0.08)" /><line x1="6" y1="18" x2="42" y2="18" stroke="url(#stepGrad2)" stroke-width="2" /><circle cx="16" cy="26" r="3" fill="#2563EB" opacity="0.6" /><circle cx="24" cy="26" r="3" fill="#00C2A8" opacity="0.6" /><circle cx="32" cy="26" r="3" fill="#25D366" opacity="0.6" /><circle cx="16" cy="34" r="3" fill="#00C2A8" opacity="0.4" /><circle cx="24" cy="34" r="3" fill="#2563EB" opacity="0.4" /><defs><linearGradient id="stepGrad2" x1="0" y1="0" x2="48" y2="48"><stop offset="0%" stop-color="#00C2A8" /><stop offset="100%" stop-color="#2563EB" /></linearGradient></defs></svg>
                             </div>
                         </div>
                     </div>
                     <h3 class="step-title" data-i18n="howItWorks.step2Title">Recibe Reservas</h3>
-                    <p class="step-desc" data-i18n="howItWorks.step2Desc">Tus clientes reservan 24/7 a través de tu link
-                        de reservas. Todo se sincroniza automáticamente.</p>
+                    <p class="step-desc" data-i18n="howItWorks.step2Desc">Tus clientes reservan 24/7 a través de tu link de reservas. Todo se sincroniza automáticamente.</p>
                 </div>
                 <div class="step-connector">
-                    <svg width="60" height="20" viewBox="0 0 60 20">
-                        <path d="M0 10h50m0 0l-6-6m6 6l-6 6" stroke="url(#connGrad2)" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                        <defs>
-                            <linearGradient id="connGrad2" x1="0" y1="0" x2="60" y2="0">
-                                <stop offset="0%" stop-color="#2563EB" />
-                                <stop offset="100%" stop-color="#00C2A8" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
+                    <svg width="60" height="20" viewBox="0 0 60 20"><path d="M0 10h50m0 0l-6-6m6 6l-6 6" stroke="url(#connGrad2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" /><defs><linearGradient id="connGrad2" x1="0" y1="0" x2="60" y2="0"><stop offset="0%" stop-color="#2563EB" /><stop offset="100%" stop-color="#00C2A8" /></linearGradient></defs></svg>
                 </div>
                 <div class="step-card" id="step-3">
                     <div class="step-number">3</div>
                     <div class="step-visual">
                         <div class="step-illustration step-illustration-3">
                             <div class="step-icon-wrapper">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                    <path d="M24 4L6 14v20l18 10 18-10V14L24 4z" stroke="url(#stepGrad3)"
-                                        stroke-width="2.5" fill="rgba(37,211,102,0.08)" />
-                                    <path d="M17 24l5 5 10-10" stroke="#25D366" stroke-width="3" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <defs>
-                                        <linearGradient id="stepGrad3" x1="0" y1="0" x2="48" y2="48">
-                                            <stop offset="0%" stop-color="#25D366" />
-                                            <stop offset="100%" stop-color="#00C2A8" />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 4L6 14v20l18 10 18-10V14L24 4z" stroke="url(#stepGrad3)" stroke-width="2.5" fill="rgba(37,211,102,0.08)" /><path d="M17 24l5 5 10-10" stroke="#25D366" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><defs><linearGradient id="stepGrad3" x1="0" y1="0" x2="48" y2="48"><stop offset="0%" stop-color="#25D366" /><stop offset="100%" stop-color="#00C2A8" /></linearGradient></defs></svg>
                             </div>
                         </div>
                     </div>
                     <h3 class="step-title" data-i18n="howItWorks.step3Title">Disfruta los Resultados</h3>
-                    <p class="step-desc" data-i18n="howItWorks.step3Desc">Menos ausencias, más citas, cero estrés.
-                        Calendando se encarga del resto mientras tú te enfocas en lo importante.</p>
+                    <p class="step-desc" data-i18n="howItWorks.step3Desc">Menos ausencias, más citas, cero estrés. Calendando se encarga del resto mientras tú te enfocas en lo importante.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Use Cases & Trust Section (Reemplazo de Testimonios) -->
+    <!-- Use Cases & Trust Section -->
     <section class="use-cases-section" id="use-cases" style="padding: var(--space-20) 0; background: var(--white);">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Adaptado a tu Negocio</span>
-                <h2 class="section-title">Diseñado para Resolver el Caos<br><span class="gradient-text">de tu Agenda
-                        Diaria</span></h2>
-                <p class="section-subtitle">Mira cómo Calendando automatiza el agendamiento según tu tipo de servicio.
-                </p>
+                <h2 class="section-title">Diseñado para Resolver el Caos<br><span class="gradient-text">de tu Agenda Diaria</span></h2>
+                <p class="section-subtitle">Mira cómo Calendando automatiza el agendamiento según tu tipo de servicio.</p>
             </div>
 
-            <div class="use-cases-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-
-                <!-- Caso 1: Salud y Consultorios -->
-                <div class="use-case-card"
-                    style="background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-2xl); padding: 1.75rem;">
+            <div class="use-cases-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <!-- Caso 1: Salud -->
+                <div class="use-case-card" style="background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-2xl); padding: 1.75rem;">
                     <div style="font-size: 2rem; margin-bottom: 0.75rem;">🦷</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.5rem;">
-                        Clínicas y Consultorios</h3>
-                    <p style="color: var(--gray-600); font-size: 0.95rem; line-height: 1.6;">Reduce drásticamente los
-                        huecos en agenda enviando recordatorios automáticos 24h antes de la consulta médica o dental.
-                    </p>
-                    <div
-                        style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); font-size: 0.85rem; font-weight: 600; color: var(--purple);">
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.5rem;">Clínicas y Consultorios</h3>
+                    <p style="color: var(--gray-600); font-size: 0.95rem; line-height: 1.6;">Reduce drásticamente los huecos en agenda enviando recordatorios automáticos 24h antes de la consulta médica o dental.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); font-size: 0.85rem; font-weight: 600; color: var(--purple);">
                         ✓ Confirmación directa por respuesta en WhatsApp
                     </div>
                 </div>
 
-                <!-- Caso 2: Belleza y Estética -->
-                <div class="use-case-card"
-                    style="background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-2xl); padding: 1.75rem;">
+                <!-- Caso 2: Belleza -->
+                <div class="use-case-card" style="background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-2xl); padding: 1.75rem;">
                     <div style="font-size: 2rem; margin-bottom: 0.75rem;">💇‍♀️</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.5rem;">
-                        Salones y Barberías</h3>
-                    <p style="color: var(--gray-600); font-size: 0.95rem; line-height: 1.6;">Permite a tus clientes
-                        reservar su turno mientras trabajas. Tu enlace de agendamiento atiende las 24 horas por ti.</p>
-                    <div
-                        style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); font-size: 0.85rem; font-weight: 600; color: var(--teal-dark);">
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.5rem;">Salones y Barberías</h3>
+                    <p style="color: var(--gray-600); font-size: 0.95rem; line-height: 1.6;">Permite a tus clientes reservar su turno mientras trabajas. Tu enlace de agendamiento atiende las 24 horas por ti.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); font-size: 0.85rem; font-weight: 600; color: var(--teal-dark);">
                         ✓ Cero interrupciones durante tus servicios
                     </div>
                 </div>
 
                 <!-- Caso 3: Servicios Profesionales -->
-                <div class="use-case-card"
-                    style="background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-2xl); padding: 1.75rem;">
+                <div class="use-case-card" style="background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-2xl); padding: 1.75rem;">
                     <div style="font-size: 2rem; margin-bottom: 0.75rem;">📋</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.5rem;">
-                        Asesores y Consultores</h3>
-                    <p style="color: var(--gray-600); font-size: 0.95rem; line-height: 1.6;">Sincroniza tu agenda
-                        personal con Google Calendar para evitar empalmes o citas dobles en tus asesorías.</p>
-                    <div
-                        style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); font-size: 0.85rem; font-weight: 600; color: var(--purple);">
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.5rem;">Asesores y Consultores</h3>
+                    <p style="color: var(--gray-600); font-size: 0.95rem; line-height: 1.6;">Sincroniza tu agenda personal con Google Calendar para evitar empalmes o citas dobles en tus asesorías.</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200); font-size: 0.85rem; font-weight: 600; color: var(--purple);">
                         ✓ Sincronización en tiempo real
                     </div>
                 </div>
-
             </div>
 
-            <!-- Banner de Garantía para Tráfico Frío de Ads -->
-            <div class="trust-banner"
-                style="margin-top: 3rem; background: linear-gradient(135deg, rgba(37,99,235,0.05), rgba(0,194,168,0.05)); border: 1px dashed var(--purple-light); border-radius: var(--radius-2xl); padding: 1.5rem; text-align: center;">
-                <p style="font-weight: 700; color: var(--gray-900); font-size: 1.1rem; margin-bottom: 0.5rem;">Prueba el
-                    sistema con tu propio negocio hoy mismo</p>
-                <p style="color: var(--gray-600); font-size: 0.95rem; margin-bottom: 0;"> Configuración en 5 minutos ·
-                    🚫 No requiere tarjeta de crédito · 📲 Notificaciones activas desde el primer día</p>
+            <!-- Banner de Garantía -->
+            <div class="trust-banner" style="margin-top: 3rem; background: linear-gradient(135deg, rgba(37,99,235,0.05), rgba(0,194,168,0.05)); border: 1px dashed var(--purple-light); border-radius: var(--radius-2xl); padding: 1.5rem; text-align: center;">
+                <p style="font-weight: 700; color: var(--gray-900); font-size: 1.1rem; margin-bottom: 0.5rem;">Prueba el sistema con tu propio negocio hoy mismo</p>
+                <p style="color: var(--gray-600); font-size: 0.95rem; margin-bottom: 0;"> Configuración en 5 minutos · 🚫 No requiere tarjeta de crédito · 📲 Notificaciones activas desde el primer día</p>
             </div>
         </div>
     </section>
@@ -606,10 +465,8 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag" data-i18n="pricing.tag">Planes</span>
-                <h2 class="section-title" data-i18n="pricing.title">Elige el Plan<br><span
-                        class="gradient-text">Perfecto para Ti</span></h2>
-                <p class="section-subtitle" data-i18n="pricing.subtitle">Comienza gratis y escala cuando lo necesites.
-                    Sin compromisos.</p>
+                <h2 class="section-title" data-i18n="pricing.title">Elige el Plan<br><span class="gradient-text">Perfecto para Ti</span></h2>
+                <p class="section-subtitle" data-i18n="pricing.subtitle">Comienza gratis y escala cuando lo necesites. Sin compromisos.</p>
             </div>
             <div class="pricing-grid">
                 <div class="pricing-card" id="plan-50">
@@ -634,8 +491,7 @@
                         <span class="pricing-currency">$</span>
                         <span class="pricing-amount">18</span>
                     </div>
-                    <p class="pricing-card-note">Incluye automatizaciones y recordatorios para agilizar cada reserva.
-                    </p>
+                    <p class="pricing-card-note">Incluye automatizaciones y recordatorios para agilizar cada reserva.</p>
                     <a href="https://app.calendando.com/" class="btn btn-primary btn-pricing">Comienza Gratis</a>
                 </div>
                 <div class="pricing-card" id="plan-200">
@@ -647,8 +503,7 @@
                         <span class="pricing-currency">$</span>
                         <span class="pricing-amount">32</span>
                     </div>
-                    <p class="pricing-card-note">Ideal si ya manejas varias reservas al día y necesitas más capacidad.
-                    </p>
+                    <p class="pricing-card-note">Ideal si ya manejas varias reservas al día y necesitas más capacidad.</p>
                     <a href="https://app.calendando.com/" class="btn btn-outline btn-pricing">Comienza Gratis</a>
                 </div>
                 <div class="pricing-card is-hidden" id="plan-300">
@@ -660,8 +515,7 @@
                         <span class="pricing-currency">$</span>
                         <span class="pricing-amount">42</span>
                     </div>
-                    <p class="pricing-card-note">Ajusta tu flujo de trabajo con más capacidad y menos gestión manual.
-                    </p>
+                    <p class="pricing-card-note">Ajusta tu flujo de trabajo con más capacidad y menos gestión manual.</p>
                     <a href="https://app.calendando.com/" class="btn btn-outline btn-pricing">Comienza Gratis</a>
                 </div>
                 <div class="pricing-card is-hidden" id="plan-400">
@@ -701,35 +555,21 @@
                 <h2 class="section-title">Preguntas Frecuentes</h2>
             </div>
             <div class="faq-list" style="display: flex; flex-direction: column; gap: 1rem;">
-                <details
-                    style="padding: 1.25rem; border: 1px solid var(--gray-200); border-radius: var(--radius-xl); background: var(--gray-50);">
-                    <summary style="font-weight: 700; cursor: pointer; color: var(--gray-900);">¿Necesito pagar extra
-                        por la API de WhatsApp?</summary>
-                    <p style="margin-top: 0.75rem; color: var(--gray-600); font-size: 0.95rem;">No. Calendando incluye
-                        el servicio de notificaciones dentro de sus planes, sin requerir integraciones complejas ni
-                        pagos adicionales.</p>
+                <details style="padding: 1.25rem; border: 1px solid var(--gray-200); border-radius: var(--radius-xl); background: var(--gray-50);">
+                    <summary style="font-weight: 700; cursor: pointer; color: var(--gray-900);">¿Necesito pagar extra por la API de WhatsApp?</summary>
+                    <p style="margin-top: 0.75rem; color: var(--gray-600); font-size: 0.95rem;">No. Calendando incluye el servicio de notificaciones dentro de sus planes, sin requerir integraciones complejas ni pagos adicionales.</p>
                 </details>
-                <details
-                    style="padding: 1.25rem; border: 1px solid var(--gray-200); border-radius: var(--radius-xl); background: var(--gray-50);">
-                    <summary style="font-weight: 700; cursor: pointer; color: var(--gray-900);">¿Necesito ingresar mi
-                        tarjeta de crédito para probarlo?</summary>
-                    <p style="margin-top: 0.75rem; color: var(--gray-600); font-size: 0.95rem;">No. Puedes registrarte y
-                        configurar tu cuenta de manera totalmente gratuita durante tu periodo de prueba sin ingresar
-                        datos bancarios.</p>
+                <details style="padding: 1.25rem; border: 1px solid var(--gray-200); border-radius: var(--radius-xl); background: var(--gray-50);">
+                    <summary style="font-weight: 700; cursor: pointer; color: var(--gray-900);">¿Necesito ingresar mi tarjeta de crédito para probarlo?</summary>
+                    <p style="margin-top: 0.75rem; color: var(--gray-600); font-size: 0.95rem;">No. Puedes registrarte y configurar tu cuenta de manera totalmente gratuita durante tu periodo de prueba sin ingresar datos bancarios.</p>
                 </details>
-                <details
-                    style="padding: 1.25rem; border: 1px solid var(--gray-200); border-radius: var(--radius-xl); background: var(--gray-50);">
-                    <summary style="font-weight: 700; cursor: pointer; color: var(--gray-900);">¿Puedo sincronizar mi
-                        cuenta con Google Calendar?</summary>
-                    <p style="margin-top: 0.75rem; color: var(--gray-600); font-size: 0.95rem;">Sí, Calendando se
-                        sincroniza bidireccionalmente con Google Calendar para evitar citas dobles y actualizar tus
-                        horarios en tiempo real.</p>
+                <details style="padding: 1.25rem; border: 1px solid var(--gray-200); border-radius: var(--radius-xl); background: var(--gray-50);">
+                    <summary style="font-weight: 700; cursor: pointer; color: var(--gray-900);">¿Puedo sincronizar mi cuenta con Google Calendar?</summary>
+                    <p style="margin-top: 0.75rem; color: var(--gray-600); font-size: 0.95rem;">Sí, Calendando se sincroniza bidireccionalmente con Google Calendar para evitar citas dobles y actualizar tus horarios en tiempo real.</p>
                 </details>
             </div>
         </div>
     </section>
-
-
 
     <!-- Final CTA -->
     <section class="final-cta" id="cta">
@@ -740,13 +580,10 @@
         <div class="container cta-content">
             <div class="cta-emoji">🚀</div>
             <h2 class="cta-title" data-i18n="cta.title">¿Listo para Transformar<br>tu Agenda?</h2>
-            <p class="cta-subtitle" data-i18n="cta.subtitle">Únete a cientos de profesionales que ya eliminaron el caos
-                de sus citas con Calendando.</p>
+            <p class="cta-subtitle" data-i18n="cta.subtitle">Únete a cientos de profesionales que ya eliminaron el caos de sus citas con Calendando.</p>
             <div class="cta-form" id="cta-form">
-                <a href="https://app.calendando.com" class="btn btn-primary btn-lg cta-submit"
-                    data-i18n="cta.button">Prueba Gratis</a>
-                <p class="cta-disclaimer" data-i18n="cta.disclaimer">Sin tarjeta de crédito · Cancela cuando quieras ·
-                    Configuración en 5 minutos</p>
+                <a href="https://app.calendando.com" class="btn btn-primary btn-lg cta-submit" data-i18n="cta.button">Prueba Gratis</a>
+                <p class="cta-disclaimer" data-i18n="cta.disclaimer">Sin tarjeta de crédito · Cancela cuando quieras · Configuración en 5 minutos</p>
             </div>
         </div>
     </section>
@@ -758,26 +595,21 @@
                 <div class="footer-brand">
                     <a href="#" class="footer-logo">
                         <div class="logo-icon">
-                            <img src="assets/images/logo.svg" alt="Calendando Logo" width="24" height="24"
-                                style="display: block;">
+                            <img src="assets/images/logo.svg" alt="Calendando Logo" width="24" height="24" style="display: block;">
                         </div>
                         <span>Calendando</span>
                     </a>
-                    <p class="footer-brand-desc" data-i18n="footer.desc">Automatiza tu agenda, elimina ausencias y haz
-                        crecer tu negocio con el poder de WhatsApp.</p>
+                    <p class="footer-brand-desc" data-i18n="footer.desc">Automatiza tu agenda, elimina ausencias y haz crecer tu negocio con el poder de WhatsApp.</p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/calendando" target="_blank" rel="noopener noreferrer"
-                            class="social-link" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                        <a href="https://www.instagram.com/calendando" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="2" y="2" width="20" height="20" rx="5" />
                                 <circle cx="12" cy="12" r="5" />
                                 <circle cx="18" cy="6" r="1.5" fill="currentColor" stroke="none" />
                             </svg>
                         </a>
                         <a href="#" class="social-link" aria-label="Facebook">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
                             </svg>
                         </a>
@@ -813,32 +645,30 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/584243145815?text=Hola%20Calendando%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20la%20plataforma."
-        class="wa-fab" id="wa-fab" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener noreferrer">
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/584243145815?text=Hola%20Calendando%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20la%20plataforma." class="wa-fab" id="wa-fab" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener noreferrer">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path
-                d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.44 1.64 6.32L3 29l6.88-1.6A12.94 12.94 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z"
-                fill="#25D366" />
-            <path
-                d="M22.5 19.14c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.95-1.79-2.12-2-2.48-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.61-.81-.62h-.69c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3s1.29 3.48 1.47 3.72c.18.24 2.54 3.87 6.15 5.43.86.37 1.53.59 2.05.76.86.27 1.65.23 2.27.14.69-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z"
-                fill="white" />
+            <path d="M16 3C8.82 3 3 8.82 3 16c0 2.29.6 4.44 1.64 6.32L3 29l6.88-1.6A12.94 12.94 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3z" fill="#25D366" />
+            <path d="M22.5 19.14c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.95-1.79-2.12-2-2.48-.21-.36-.02-.56.16-.74.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.61-.81-.62h-.69c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3s1.29 3.48 1.47 3.72c.18.24 2.54 3.87 6.15 5.43.86.37 1.53.59 2.05.76.86.27 1.65.23 2.27.14.69-.1 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z" fill="white" />
         </svg>
     </a>
 
-    <!-- <div class="wa-popup" id="wa-popup" aria-hidden="true">
-        <div class="wa-popup-backdrop" id="wa-popup-backdrop"></div>
-        <div class="wa-popup-card" role="dialog" aria-modal="true" aria-labelledby="wa-popup-title">
-            <div class="wa-popup-header">
-                <h3 id="wa-popup-title">¿Quieres hablar con Calendando?</h3>
-                <button class="wa-popup-close" id="wa-popup-close" type="button" aria-label="Cerrar">×</button>
-            </div>
-            <p>Escríbenos por WhatsApp y te responderemos pronto.</p>
-            <a href="https://wa.me/584243145815?text=Hola%20Calendando%2C%20quiero%20conocer%20más%20sobre%20la%20plataforma."
-                class="btn btn-primary">Abrir WhatsApp</a>
-            <a href="mailto:info@calendando.com" class="wa-popup-email">info@calendando.com</a>
-        </div>
-    </div> -->
+    <!-- Scripts de Lógica y Preservación de Parámetros -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentParams = window.location.search;
 
+            if (currentParams) {
+                // Preserva UTMs hacia app.calendando.com excluyendo Iniciar Sesión (.btn-login)
+                const registerLinks = document.querySelectorAll('a[href*="app.calendando.com"]:not(.btn-login)');
+
+                registerLinks.forEach(link => {
+                    const separator = link.href.includes('?') ? '&' : '?';
+                    link.href = link.href + separator + currentParams.substring(1);
+                });
+            }
+        });
+    </script>
     <script src="/js/script.js"></script>
 </body>
 
