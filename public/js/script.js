@@ -115,7 +115,7 @@ const translations = {
         // CTA
         'cta.title': '¿Listo para Transformar<br>tu Agenda?',
         'cta.subtitle': 'Únete a cientos de profesionales que ya eliminaron el caos de sus citas con Calendando.',
-        'cta.button': 'Prueba Gratis 14 Días',
+        'cta.button': 'Prueba Gratis',
         'cta.disclaimer': 'Sin tarjeta de crédito · Cancela cuando quieras · Configuración en 5 minutos',
 
         // Footer
@@ -225,7 +225,7 @@ const translations = {
         'pricing.proF4': '<span class="check">✓</span> Google Calendar sync',
         'pricing.proF5': '<span class="check">✓</span> Advanced reports',
         'pricing.proF6': '<span class="check">✓</span> Priority support',
-        'pricing.proCta': 'Try 14 Days Free',
+        'pricing.proCta': 'Try Free',
         'pricing.enterpriseName': 'Enterprise',
         'pricing.enterpriseDesc': 'For clinics and chains',
         'pricing.enterpriseF1': '<span class="check">✓</span> Unlimited professionals',
@@ -249,7 +249,7 @@ const translations = {
         // CTA
         'cta.title': 'Ready to Transform<br>Your Schedule?',
         'cta.subtitle': 'Join hundreds of professionals who already eliminated appointment chaos with Calendando.',
-        'cta.button': 'Try Free for 14 Days',
+        'cta.button': 'Try Days',
         'cta.disclaimer': 'No credit card required · Cancel anytime · Setup in 5 minutes',
 
         // Footer
